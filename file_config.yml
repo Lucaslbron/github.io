@@ -1,3 +1,10 @@
-remote_theme: pages-themes/slate@v0.2.0
+theme: jekyll-theme-slate
 title: Engineering Portfolio
-description: Multidisciplinary Engineering Projects & Simulations
+description: Aerospace & Mechanical Engineering
+show_downloads: false
+
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
