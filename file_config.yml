@@ -1,10 +1,14 @@
-theme: jekyll-theme-slate
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+title: Engineering Portfolio
+description: Aerospace & Mechanical Engineering Projects
+show_downloads: false
 title: Engineering Portfolio
 description: Aerospace & Mechanical Engineering
 show_downloads: false
 
-plugins:
-  - jekyll-relative-links
 relative_links:
   enabled: true
   collections: true
