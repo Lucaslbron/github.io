@@ -6,7 +6,7 @@ title: Home | Engineering Portfolio
 # Lucas Lebron
 **Aerospace & Mechanical Engineering**
 
-[LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com) • [Email Me](mailto:your-email@example.com) • [Resume (PDF)]({{ '/assets/resume.pdf' | relative_url }})
+[LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com) • [Email Me](mailto:lucaslbron@proton.me) • [Resume (PDF)]({{ '/assets/resume.pdf' | relative_url }})
 
 ---
 
@@ -17,7 +17,7 @@ Undergraduate engineer aiming to specialize in aerospace structures and heat shi
 
 ## Featured Engineering Projects
 
-### 1. [2D Airfoil Aerodynamic Panel Method Solver]({{ '/projects/aerodynamics-solver.html' | relative_url }})
+### 1. **2D Airfoil Aerodynamic Panel Method Solver**
 - **Focus:** Aerodynamics, Computational Methods, C++
 - **Overview:** Developed an object-oriented potential flow aerodynamic solver to compute velocity distributions, pressure coefficients ($C_p$), and lift across arbitrary 2D shapes using linear-strength vortex panels and LU matrix decomposition.
 - **Tools:** C++, Linear Algebra, Git
@@ -25,19 +25,27 @@ Undergraduate engineer aiming to specialize in aerospace structures and heat shi
 
 ---
 
-### 2. [Coaxial Swirl Injector for Liquid Rocket Propulsion]({{ '/projects/rocket-propulsion-injector.html' | relative_url }})
+### 2. **Coaxial Swirl Injector for Liquid Rocket Propulsion**
 - **Focus:** Propulsion, Thermal/Fluids, 3D CAD Modeling
 - **Overview:** Designed and evaluated a bi-propellant coaxial swirl injector assembly; optimizing atomization efficiency, spray cone angle, and pressure drop.
-- **Tools:** SolidWorks, ANSYS,
+- **Tools:** SolidWorks, ANSYS
 - [Read Full Project Report →]({{ '/projects/rocket-propulsion-injector.html' | relative_url }})
 
 ---
 
-### 3. [Electric Airbike Structural, Aerodynamic, & Thermal Simulations]({{ '/projects/hybrid-electric-airbike.html' | relative_url }})
+### 3. **Electric Airbike Structural, Aerodynamic, & Thermal Simulations**
 - **Focus:** Finite Element Structural Analysis, Computational Fluid Dynamics
 - **Overview:** A comprehensive, simulation-driven design of an electric airbike. This project demonstrates a complete engineering workflow, leveraging SolidWorks to transition from initial CAD geometries to optimized, data-backed solutions.
 - **Tools:** SolidWorks Flow Simulation, FEA Stress Analysis, Thermal Analysis
 - [Read Full Project Report →]({{ '/projects/hybrid-electric-airbike.html' | relative_url }})
+
+---
+
+### 4. **Floating Arm Trebuchet | Team Captain**
+- **Focus:** Drafting, Product Realization, 
+- **Overview:** School-wide competition between engineering dynamics classes where student teams were tasked to design and construct a trebuchet under a $500 budget constraint to launch a 10lb pumpkin as far as possible.
+- **Tools:**
+- [Read Full Project Report →]({{ '/projects/trebuchet.html' | relative_url }})
 
 ---
 
