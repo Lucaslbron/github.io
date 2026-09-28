@@ -24,9 +24,9 @@ toc: true
 |---|---|
 | **Event / Competition** | School-Wide Engineering Dynamics Trebuchet Competition |
 | **Primary Objective** | Design and fabricate a mechanical launcher to maximize the launch distance of a 10 lb pumpkin |
-| **Role & Responsibilities** | Team Captain, structural layout, fastener planning, lumber procurement, fabrication, and field testing |
+| **Role & Responsibilities** | Team Captain, structural layout, fastener planning, material procurement, fabrication, and field testing |
 | **Team Size** | 10 Undergraduate Engineering Students |
-| **Budget Constraint** | $500 strict limit ($462.14 allocated in BOM; $37.86 contingency reserve) |
+| **Budget Constraint** | $500 limit ($462.14 allocated in BOM; $37.86 contingency reserve) |
 | **Development Window** | ~1 Month (concurrent design, procurement, fabrication, and validation) |
 | **Mechanism Architecture** | Floating-Arm Trebuchet (FAT) with dual vertical rolling drop tracks |
 | **Structural Materials** | Commercial dimensional lumber (2×4 Whitewood, 2×4 & 2×8 Southern Yellow Pine) |
@@ -75,7 +75,7 @@ Key geometric parameters established in the drawing package include:
 - **30° Diagonal Bracing:** Rigid 30° diagonal members connecting the outer base footing to the vertical mast, transmitting dynamic pitching loads into the ground structure.
 - **3.50 in Standard Member Width:** Dimensioned specifically around standard 2×4 lumber (actual cross-section 1.5 in × 3.5 in) and 2×8 base runners.
 
-### Authentic Fastener Calculations & Layout Notes
+### Fastener Calculations & Layout Notes
 
 Rather than generating post-hoc diagrams, the working drawing captures the authentic, iterative engineering documentation created during fabrication planning:
 
@@ -165,34 +165,50 @@ During official competition rounds, the floating-arm trebuchet successfully cock
 
 ### Post-Competition Dynamics Analysis
 
-While the machine operated safely and demonstrated the fundamental mechanics of a floating-arm launcher, our post-competition engineering evaluation identified the specific dynamics that limited our throwing distance:
+While the machine operated safely and demonstrated the fundamental mechanics of a floating-arm launcher, our post-competition engineering evaluation identified the specific shortcomings that limited our throwing distance:
 
-1. **Mechanical Friction in the Vertical Channel:**  
-   In a traditional fixed-pivot trebuchet, counterweight rotation about a greased bearing exhibits minimal parasitic friction. In our floating-arm machine, despite sanding and wax treatment, dynamic recoil forces during release induced slight sideways deflection in the throwing arm. This deflection pushed the 8-inch steel wheels against the inner wood guide surfaces, generating sliding friction that absorbed a portion of the counterweight's kinetic energy during the critical final third of its drop.
+1. **Warping & Channel Misalignment:**  
+   The floating-arm mechanism required tight alignment between the vertical weight-drop channels and the horizontal wheel channels. Although the completed wooden frame was structurally rigid, small dimensional changes introduced during fabrication affected the clearances within the mechanism.
 
-2. **Kinematic Coupling & Sling Release Sensitivity:**  
-   The release trajectory of a floating arm is governed by a highly coupled dynamic interaction: the linear descent of the axle, the horizontal translation of the arm's base roller, the rotational acceleration of the long arm, and the centrifugal whip of the sling pouch. Small variations in the release pin angle produced noticeable shifts in launch angle (launching either too steep or too flat), reducing effective downfield projectile carry.
+   During qualification certification the day before competition, approximately 1/16 in. of horizontal misalignment between the vertical channels caused the dropping weight bar to catch on the edge of the wooden channel. The interference damaged the weight bar and required the team to purchase a replacement out of pocket.
 
-3. **Compressed Testing & Tuning Window:**  
-   Because framing, guide rail alignment, and structural bolting consumed 3.5 weeks of our 4-week timeline, the team had less than 48 hours between final assembly and official competition launches. A floating-arm trebuchet requires extensive experimental tuning—adjusting counterweight mass ratios, release pin bevel angles, and sling line lengths—to reach peak efficiency. With limited tuning time, we competed with baseline settings rather than an optimized launch configuration.
+   The misalignment resulted from a combination of natural warping in the lumber and additional deformation introduced as screws and bolts were installed and tightened. This demonstrated an important limitation of the design: while the overall frame did not experience significant structural instability, the floating-arm mechanism was considerably more sensitive to dimensional tolerances than a conventional fixed-pivot trebuchet.
+
+2. **Sling Release Angle Sensitivity:**  
+   The primary performance limitation was the sling launch angle. Unlike the structural alignment issue, this was not a failure of the frame itself, but a lack of sufficient testing and tuning.
+
+   Because the team had only a few weeks to progress from the initial design to a competition-ready machine, there was insufficient time to systematically test different sling lengths, attachment positions, or launch configurations. As a result, the final machine entered competition without the launch angle being fully optimized.
+
+   The trebuchet was able to operate, but the resulting launch trajectory was not competitive with many of the other teams. The lack of time available for launch-angle testing was the primary factor contributing to the team's 9th-place finish out of 14 teams.
+
+   Engineering takeaway: For a mechanically complex system, achieving a functional design is only the first step; performance often depends on an iterative testing and tuning process.
+
+3. **Time & Tool Constraints:**  
+   The project was completed under an approximately four-week development schedule, requiring the team to progress from initial concept selection through mechanical design, material selection, budgeting, procurement, fabrication, assembly, testing, and competition.
+
+   The schedule became particularly restrictive once materials arrived. The team had approximately two weeks to construct the complete machine after receiving the lumber, screws, and bolts. This left limited time for full-scale testing and troubleshooting.
+
+   The project also required coordinating a 10-person team, including assigning fabrication and design responsibilities, scheduling meetings, attending team captain meetings with safety officers and faculty, and integrating work performed by different members. Tool availability created an additional constraint: the school provided one shared set of tools for the competing teams, requiring teams to coordinate access. Our team also relied on one member to bring additional power tools when available.
+
+Together, these constraints significantly reduced the amount of time available for systematic testing and refinement. The experience reinforced the importance of design-for-fabrication, early prototype testing, and schedule allocation for troubleshooting, particularly when developing a mechanically complex system.
 
 ---
 
 ## Engineering Takeaways & Lessons Learned
 
-Rather than presenting an idealized narrative, this project provided firsthand design-build-test experience that revealed critical principles of mechanical engineering and project management:
+Rather than presenting an idealized narrative, this project is meant to show a realistic account of the design-build-test experience that revealed critical principles of mechanical engineering and project management:
 
-### 1. Mechanism Complexity Must Match the Schedule Window
-A mechanism that offers theoretical advantages on paper (pure vertical drop efficiency) is only advantageous in practice if the project timeline provides sufficient margin to characterize, calibrate, and tune its additional degrees of freedom. For a rapid 4-week student timeline, a simpler mechanism with a larger tuning window often outperforms a more complex mechanism fielded near its baseline state.
+### 1. Mechanism Complexity Must Be Balanced Against Development Time
+The floating-arm configuration introduced additional alignment and tuning requirements compared with a simpler trebuchet design. With approximately four weeks available from concept to competition, the team had limited time to characterize the mechanism, resolve fabrication issues, and optimize its launch performance. This project demonstrated that a mechanically complex concept can require significantly more development time before its theoretical advantages translate into practical performance.
 
-### 2. Practical Fabrication Constraints Dictate System Performance
-Tolerances in wood structures are vastly looser than machined metal assemblies. Natural warping, grain friction, and fastener compliance can introduce dynamic binding modes that theoretical equations do not account for. Future mechanical designs with sliding or rolling tracks must incorporate rigid metal guide liners or low-friction polymer wear strips rather than relying on raw finished lumber.
+### 2. Manufacturing Tolerances Can Affect Mechanism Performance
+Although the wooden frame remained structurally stable, relatively small dimensional changes affected the operation of the floating-arm mechanism. Natural lumber warping, combined with deformation introduced during fastening, contributed to approximately 1/16 in. of channel misalignment. This was sufficient to cause the weight bar to catch during qualification and require replacement. The experience demonstrated that structural strength alone does not guarantee proper mechanical function; clearances and alignment must also be considered during fabrication.
 
-### 3. Early Physical Testing is Mandatory for Coupled Dynamics
-When mechanical subsystems feature coupled multi-body dynamics (simultaneous linear translation and rotation), mathematical modeling alone cannot replace physical calibration. Subscale physical prototyping early in week one would have exposed the sling release pin sensitivity weeks before full-scale assembly, allowing the team to converge on optimal release geometry earlier.
+### 3. Testing and Tuning Are Part of the Design Process
+The trebuchet was completed and operational, but the compressed schedule left insufficient time to systematically test and refine the sling launch angle. The resulting launch trajectory limited the machine's competitive performance and was the primary factor contributing to the team's 9th-place finish out of 14 teams. This project reinforced that completing the physical build is not the end of the design process—testing and iteration are necessary to translate a functional mechanism into a well-tuned system.
 
-### 4. Demonstrating the Full Engineering Cycle
-Computer-aided design and FEA simulations are powerful, but physically building hardware—ordering materials to a strict $500 budget, cutting lumber, drilling through-bolts, troubleshooting track binding, and fielding a full-scale machine under competition pressure—provides an indispensable foundation for aerospace and mechanical engineering careers.
+### 4. Engineering Requires Coordinating Design, Fabrication, and People
+The project required a 10-person team to move from an initial concept to a competition-ready machine within approximately four weeks while working within a $500 budget and shared-tool constraints. Design decisions, material procurement, fabrication, assembly, testing, and team coordination had to occur simultaneously. This experience demonstrated the importance of distributing responsibilities effectively, accounting for fabrication and procurement time during planning, and maintaining enough schedule margin for unexpected problems.
 
 ---
 
