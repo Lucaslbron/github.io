@@ -5,3 +5,8 @@ show_downloads: false
 relative_links:
   enabled: true
   collections: true
+
+markdown: kramdown
+kramdown:
+  math_engine: nil
+  syntax_highlighter: rouge

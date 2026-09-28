@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- MathJax v3 Configuration -->
+  {% include mathjax.html %}
+
+  <style>
+    :root {
+      --bg-color: #0f1117;
+      --card-bg: #161922;
+      --border-color: #262a38;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+      --code-bg: #1c202c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    header.site-header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(22, 25, 34, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-brand a {
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .site-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent-hover);
+    }
+
+    main.site-content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 { font-size: 2.1rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem; margin-top: 2.25rem; }
+    h3 { font-size: 1.2rem; }
+
+    p { margin-top: 0; margin-bottom: 1.15rem; }
+
+    a {
+      color: var(--accent-hover);
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border-color);
+      margin: 2rem 0;
+    }
+
+    /* MathJax formatting */
+    mjx-container {
+      outline: none !important;
+    }
+
+    mjx-container[display="true"] {
+      margin: 1.25rem 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0.75rem 0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th, td {
+      padding: 0.65rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #1a1e29;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Blockquotes */
+    blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 1.5rem 0;
+      padding: 0.6rem 1.25rem;
+      background-color: rgba(59, 130, 246, 0.08);
+      border-radius: 0 8px 8px 0;
+      color: #cbd5e1;
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Images */
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin: 1rem 0 0.5rem 0;
+      display: block;
+    }
+
+    em {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Code */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background-color: var(--code-bg);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      color: #e2e8f0;
+      border: 1px solid #2d3345;
+    }
+
+    pre code {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--border-color);
+      margin-top: 4rem;
+      padding: 2rem 1.25rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-brand">
+        <a href="{{ '/' | relative_url }}">Lucas Lebron</a>
+      </div>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Portfolio Home</a>
+        <a href="{{ '/projects/injector/' | relative_url }}">Impinging Injector</a>
+        <a href="{{ '/assets/docs/resume-lucas-lebron.pdf' | relative_url }}">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ 'now' | date: "%Y" }} Lucas Lebron • Aerospace & Mechanical Engineering Portfolio</p>
+  </footer>
+</body>
+</html>

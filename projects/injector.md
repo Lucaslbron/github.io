@@ -36,7 +36,7 @@ My primary responsibility was the **iterative CAD development of the injector to
 
 ---
 
-## 1. Design Evolution: Coaxial Swirl → Impinging Injector
+## Design Evolution: Coaxial Swirl → Impinging Injector
 
 The initial injector concept used a **coaxial swirl injector**. As the design progressed toward manufacturing, the team determined that the required tolerances and geometric complexity were too demanding for the manufacturing resources available to a small university team.
 
@@ -66,7 +66,7 @@ This design change established an important constraint for the remainder of the 
 
 ---
 
-## 2. From Requirements to Injector Geometry
+## From Requirements to Injector Geometry
 
 The preliminary engine requirements were translated into injector flow requirements and then into physical geometry.
 
@@ -154,7 +154,7 @@ The resulting dimensions provided the initial flow geometry used during CAD deve
 
 ---
 
-## 3. Impingement Geometry
+## Impingement Geometry
 
 The calculated orifice dimensions were then used to establish the physical impingement geometry.
 
@@ -192,7 +192,7 @@ These calculations established the initial outlet locations and spacing used to 
 
 ---
 
-## 4. Iterative CAD Development
+## Iterative CAD Development
 
 The analytical dimensions established the starting point, but the injector required significant CAD development to integrate the fluid passages, mechanical attachment, sealing, external interfaces, and manufacturing requirements.
 
@@ -235,7 +235,7 @@ The analytical dimensions established the starting point, but the injector requi
 
 ### Top-Plate Design
 
-I was primarily responsible for the **iterative development of the injector top plate**.
+I was primarily responsible for the iterative development of the injector top plate.
 
 The design process required repeatedly adjusting the geometry as the following requirements were integrated:
 
@@ -251,7 +251,7 @@ Rather than treating the initial analytical dimensions as a finished design, I i
 
 ### Bulkhead Bolt Pattern
 
-I also determined the **position and sizing of the bulkhead bolt pattern for both injector plates**.
+I also determined the position and sizing of the bulkhead bolt pattern for both injector plates. Emphasis was made to allow for excess bolts to allow for a greater factor of safety during pressurized testing conditions.
 
 The bolt pattern needed to provide the required mechanical attachment while fitting within the available plate geometry and avoiding interference with the internal flow passages and other features.
 
@@ -259,7 +259,7 @@ This made the bolt pattern part of the overall injector architecture rather than
 
 ---
 
-## 5. Mechanical Design and Engineering Drawings
+## Mechanical Design and Engineering Drawings
 
 The analytical design had to be translated into detailed manufacturing geometry.
 
@@ -289,7 +289,7 @@ The internal passages connect the external propellant interfaces to the injector
 
 ---
 
-## 6. CFD Verification of Impingement Geometry
+## CFD Verification of Impingement Geometry
 
 The impingement angle and outlet positioning were initially established through analytical calculations.
 
@@ -311,7 +311,7 @@ The simulated velocity was also on the same order as the analytical injection-ve
 
 ---
 
-## 7. Designing for Manufacturing
+## Designing for Manufacturing
 
 Manufacturing feasibility was a major driver of the final injector architecture.
 
@@ -331,7 +331,7 @@ The final architecture allowed the team to move from a more complex injector con
 
 ---
 
-## 8. Design Outcome
+## Design Outcome
 
 The final injector design progressed from preliminary analytical sizing to a detailed two-plate CAD assembly with defined flow passages, mechanical interfaces, and manufacturing drawings.
 
@@ -351,7 +351,7 @@ The project therefore progressed through the complete preliminary design workflo
 
 ---
 
-## 9. My Contribution
+## My Contribution
 
 ### Injector CAD — Primary Responsibility
 
