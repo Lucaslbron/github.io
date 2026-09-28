@@ -93,7 +93,7 @@ My primary responsibility was the **iterative CAD design of the injector top pla
 
 For detailed derivations, equations, and full drawings, refer to the technical documents below:
 
-- **[Full Technical Deep-Dive Report (20-min read)]({{ '/projects/injector/' | relative_url }})**
+- **[Full Technical Deep-Dive Report (15-min read)]({{ '/projects/injector/' | relative_url }})**
 - **[Interactive 3D CAD Viewer (Browser-based)]({{ '/projects/injector-cad-viewer.html' | relative_url }})**
 - **[Preliminary Design Review (PDR) (PDF)]({{ '/assets/docs/injector/liquid-propulsion-preliminary-design-review.pdf' | relative_url }})**
 - **[Impinging Injector Manufacturing Drawings (PDF)]({{ '/assets/docs/injector/impinging-injector-drawings.pdf' | relative_url }})**
