@@ -117,28 +117,30 @@
     .toc-sidebar {
       width: 270px;
       flex-shrink: 0;
-      display: block;
-    }
-
-    .toc-sticky-container {
       position: -webkit-sticky;
       position: sticky;
       top: 5rem;
+      align-self: flex-start;
       max-height: calc(100vh - 6.5rem);
       overflow-y: auto;
       overflow-x: hidden;
       padding-bottom: 1rem;
       scrollbar-width: thin;
       scrollbar-color: var(--border-color) transparent;
+      z-index: 50;
     }
 
-    .toc-sticky-container::-webkit-scrollbar {
+    .toc-sidebar::-webkit-scrollbar {
       width: 4px;
     }
 
-    .toc-sticky-container::-webkit-scrollbar-thumb {
+    .toc-sidebar::-webkit-scrollbar-thumb {
       background: var(--border-color);
       border-radius: 4px;
+    }
+
+    .toc-sticky-container {
+      width: 100%;
     }
 
     .toc-card {
