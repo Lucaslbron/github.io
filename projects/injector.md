@@ -52,17 +52,17 @@ The original concept required a more complex internal geometry and tighter manuf
 
 *Original coaxial swirl injector concept and associated manufacturing drawings.*
 
-### Final Impinging Configuration
+### Initial Impinging Configuration
 
-The revised concept used a two-plate architecture, allowing the internal flow passages and injector features to be incorporated into comparatively accessible machined geometries.
+The revised concept used an impinging configuration, allowing the internal flow passages and injector features to be incorporated into comparatively accessible machined geometries.
 
-![Final Impinging Injector]({{ '/assets/images/injector/injector-viewport.png' | relative_url }})
+![First-Iteration Impinging Injector]({{ '/assets/images/injector/initial-impinging-injector.png' | relative_url }})
 
-*Final impinging injector assembly.*
+*First-iteration impinging injector assembly.*
 
 This design change established an important constraint for the remainder of the project:
 
-> **The injector needed to satisfy its fluid-dynamic requirements while remaining practical to manufacture, assemble, and test.**
+> **The injector needed to satisfy its mission-critical requirements while remaining practical to manufacture, assemble, and test.**
 
 ---
 
