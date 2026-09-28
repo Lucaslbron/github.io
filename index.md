@@ -28,6 +28,7 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Tools:** SolidWorks, ANSYS
 - [Read Quick Overview →]({{ '/projects/injector-quick-overview.html' | relative_url }})
 - [Read Full Project Report →]({{ '/projects/injector/' | relative_url }})
+- [Interactive 3D CAD Viewer ⛶]({{ '/projects/injector-cad-viewer.html' | relative_url }})
 
 ---
 
@@ -38,6 +39,7 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Tools:** SolidWorks, SolidWorks Flow Simulation, FEA Stress Analysis, Thermal Analysis
 - [Read Quick Overview →]({{ '/projects/airbike-quick-overview.html' | relative_url }})
 - [Read Full Project Report →]({{ '/projects/airbike.html' | relative_url }})
+- [Interactive 3D CAD Viewer ⛶]({{ '/projects/airbike-cad-viewer.html' | relative_url }})
 
 ---
 

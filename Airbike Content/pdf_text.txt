@@ -1,0 +1,162 @@
+=== PAGE 1 ===
+Electric Airbike
+ Engineering Design & Analysis — Full Technical Deep Dive Example
+Project statement: Given fixed starting positions for the wheels, control device (handlebars and connected
+rod), and motor, design an electric airbike incorporating the required vehicle systems and evaluate the
+resulting designs through CAD, structural, fluid, and thermal studies.
+Project
+Electric Airbike Design
+Primary CAD
+SolidWorks
+Material studies
+6061-T6 / 7075-T6 aluminum; other materials as modeled
+Analysis
+FEA, flow simulation, nonlinear study, fatigue study, thermal study
+My role
+Design, CAD integration, structural analysis, thermal/flow studies
+This example intentionally reorganizes the original 136-slide presentation into a portfolio case study. The goal is not to reproduce the
+presentation; it is to show how the same engineering work can be presented as a coherent design story.
+
+
+=== PAGE 2 ===
+1. Requirements & Design Constraints
+The project began with fixed locations for the wheels, handlebars/control linkage, and motor. The chassis therefore had
+to be designed around existing geometric constraints while preserving operator space and room for future components.
+The presentation also identifies the chassis material as Aluminum 6061-T6, with 2.5 in OD × 0.25 in wall round tube for
+the main chassis and 2.0 in OD × 0.25 in wall tube for the later rear supports. ■
+Design constraints carried through the project:
+ Fixed wheel and control-device locations
+ Motor mounting/interface requirements
+ Operator packaging and foot clearance
+ Space for future components and seat hardware
+ Structural strength and acceptable deflection
+ Manufacturable geometry and practical material selection
+ The original presentation notes that the rear wheel clearance was relatively tight and identifies this as an area
+that would need more tolerance in a real production design.
+2. Chassis Design & Structural Iteration
+The first major design iteration was evaluated without the rear vertical supports. The analysis showed that the initial
+chassis was substantially under-supported, so two rear supports were introduced and the model was re-evaluated. This
+is the clearest example in the project of the design-analysis-redesign loop that should be emphasized in the portfolio.
+Structural results: maximum stress decreased from 5.233 × 104 psi to 2.786 × 103 psi after the support
+modification. Maximum deflection decreased from 5.512 in to 0.03444 in. Minimum factor of safety increased
+from 0.76 to 14.
+The presentation attributes the loading to a 200 lb operator and a 400 lb fan assembly. The final design therefore
+demonstrates how simulation was used to identify a major structural weakness and guide a specific geometric
+modification rather than simply documenting a final FEA result.
+
+
+=== PAGE 3 ===
+3. Seat Frame Design & Nonlinear Loading
+The seat was developed around operator packaging, seating dimensions, clearance from the chassis, and room for
+cushioning. The modeled seat uses Aluminum 7075-T6 with a 0.2294 in sheet thickness. The initial dimensions were
+established from an estimated 12 in × 12 in seating area and a 16 in overall height.
+The analysis modeled a changing load over a two-second interval. The presentation describes the main seat load
+decreasing from 200 lb to 150 lb while 50 lb was transferred to the backrest. The initial study produced a factor of safety
+of 1.862 and identified the need for additional support/suspension to mitigate displacement.
+ This section is worth keeping in the deep dive because it demonstrates that the seat was not treated as an
+isolated CAD component: its geometry, operator interface, loading, and later suspension system were
+developed as connected design problems.
+4. Seat Suspension: Iteration & Fatigue Study
+The suspension design was integrated into the existing seat/chassis geometry and evaluated under the defined loading
+and fixture conditions. The second iteration modified the connection geometry after SolidWorks limitations prevented the
+intended curved connection from being modeled as planned.
+ Iteration results: maximum stress decreased from 3.013 × 104 psi to 1.788 × 104 psi; maximum
+displacement decreased from 0.66 in to 0.40 in; and minimum factor of safety increased from 2.432 to 4.097.
+An important limitation should remain visible in the portfolio: the presentation reports that the damage and cycle-life plots
+contained an unresolved error, so fatigue life could not be quantified reliably. The second design nevertheless showed
+improved stress, displacement, and minimum FOS.
+
+
+=== PAGE 4 ===
+5. Battery Pack & Thermal Study
+The battery pack was designed as the vehicle's power source and evaluated with a preliminary thermal model. The study
+used a convection coefficient of 10 W/m·K and included rudimentary fins as a temporary cooling approach.
+ The simulated maximum temperature reached 770,100 °F. The presentation explicitly recognizes this as
+nonphysical for the intended battery system and concludes that the battery would experience catastrophic
+thermal runaway long before this temperature. The result is therefore best presented as a modeling
+limitation / boundary-condition problem, not as a physical prediction.
+For the portfolio, I would keep this result because it demonstrates engineering judgment: the important outcome is not
+the extreme number itself, but recognizing that the simulation setup does not represent a physically valid operating
+condition and identifying the need for a new thermal solution.
+6. Fixed-Wing Aerodynamics & Structural Analysis
+A fixed wing was designed from scratch for the airbike and evaluated using flow simulation. The wing was modeled
+without onboard flight-control surfaces. The presentation reports that the original submission used 55 mph while the
+updated study shown in the final presentation used 75 mph.
+ Reported results: maximum stress of approximately 4,795 psi, maximum displacement of approximately
+0.6859 in, and minimum factor of safety of approximately 0.605 for the modeled balsa configuration.
+The low FOS led to a material/design change: the wing material was changed to Aluminum 6061-T6 in the larger vehicle
+model. This also exposed a major vehicle-level optimization problem because the modeled wings were still solid rather
+than internally ribbed/sparred.
+
+
+=== PAGE 5 ===
+7. Propeller / Fan Flow Study
+The propeller/fan system was designed to propel the airbike and included both the blade airfoils and protective cage. A
+rotating-region flow study was used to examine pressure, force, trajectories, and particle behavior.
+ The study reported an average normal force of approximately 798 lbf. The presentation then compared this
+with an overall vehicle mass of approximately 3,000 lb and concluded that the modeled thrust would not be
+sufficient to move the vehicle as configured.
+Rather than treating that as a final failure, the presentation identifies several optimization paths: reducing wing mass,
+increasing fan size, optimizing blade count/geometry, and selecting lighter materials while maintaining a suitable factor of
+safety. This is a strong vehicle-level engineering discussion and should remain in the deep dive.
+8. Battery-Pack Heat Exchanger
+The heat exchanger was developed to manage the battery pack's thermal profile. The flow study modeled R-134a and oil
+and used mass-flow boundary conditions. The presentation calculated a refrigerant mass flow of 1.17 lb/s and an oil
+mass flow of 0.35 lb/s for the modeled conditions.
+The study produced an R-134a outlet temperature of -9.81 °F. The presentation investigates this result and attributes the
+localized cooling to pressure-drop/expansion effects associated with the unpressurized outlet boundary condition. It then
+identifies a more realistic pressurized outlet condition of approximately 50–60 psia as a way to remove that modeling
+artifact.
+
+
+=== PAGE 6 ===
+9. Final Design & Engineering Assessment
+The final portfolio story should not claim that every subsystem is production-ready. The presentation itself identifies
+several areas requiring further engineering: additional rear-wheel clearance, a more cost-effective structural material
+selection, improved wing structural architecture and weight reduction, a new battery cooling approach, and further
+fan/vehicle optimization.
+ The stronger story is that the project progressed from a set of fixed geometric constraints into an integrated
+airbike concept, while simulation repeatedly exposed design weaknesses and informed subsequent changes.
+Key demonstrated engineering work
+Area
+Evidence from the project
+Chassis
+Iterative FEA; support redesign; stress, deflection and FOS comparison
+Seat
+Operator packaging; nonlinear load distribution; structural analysis
+Suspension
+Integrated redesign; stress/deflection/FOS improvement; fatigue-study limitations identified
+Aerodynamics
+Fixed-wing design; flow trajectory/particle studies; structural FEA
+Propulsion
+Fan/blade design; rotating-region flow study; force assessment
+Thermal
+Battery thermal study; heat-exchanger flow/thermal analysis
+10. My Contribution
+Primary responsibilities: chassis CAD and structural iteration; seat and suspension design; integration of vehicle
+subsystems; setup and interpretation of multiple SolidWorks simulation studies; wing and fan modeling; battery and
+heat-exchanger studies.
+Engineering judgment demonstrated: identifying excessive chassis deflection and adding supports; recognizing the
+limitations of the fatigue and thermal models; identifying the low wing FOS; recognizing that vehicle mass made the
+modeled fan force insufficient; and proposing specific redesign directions.
+11. Engineering Takeaways
+ Simulation should drive design decisions: the chassis support redesign is the clearest example of analysis directly
+changing geometry.
+ Subsystem results must be considered at vehicle level: the fan study became meaningful only when compared
+against the approximately 3,000 lb vehicle mass.
+ Model limitations matter: the thermal and fatigue studies contain explicitly acknowledged limitations, which should be
+presented rather than hidden.
+ Weight and manufacturability remain future optimization targets: the final concept provides a basis for further
+structural and aerodynamic refinement.
+12. Supporting Documents
+Recommended links on the website: Final presentation PDF  CAD assembly / interactive 3D model  Chassis drawings 
+Seat/suspension drawings  Simulation result sets  Heat-exchanger study  Any MATLAB/calculation files used in sizing
+or analysis.
+
+
+=== PAGE 7 ===
+Portfolio note: this deep dive is intentionally shorter and more analytical than the original presentation. The original deck contains the detailed
+plots, setup screens, meshes, animations, and intermediate results; the website should link those artifacts for readers who want to inspect the
+evidence.
+
+

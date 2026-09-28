@@ -1,0 +1,408 @@
+=== SLIDE 1 (Images: ) ===
+Chassis  Modeling and Study By Lucas Lebron
+
+=== SLIDE 2 (Images: ) ===
+Contents 5 . Deflection Plot 4 . Stress Plot 3. Design Choices 2 . Project Overview 1 . Conclusion 6. Factor of Safety Plot
+
+=== SLIDE 3 (Images: ) ===
+Project Overview In this project we are tasked with designing a  chassis  for an electric airbike while considering restraints such as the placement of the operator, the wheels, handlebars, and mounting points. The main chassis is built out of Al RND TUBE 2.5 OD x 0.25 wall tube while the back two supports added at a later stage are Al RND TUBE 2.0 OD x 0.25 wall tube. The material used was Aluminum 6061-T6 and as seen later, a drastic overshoot of necessary support. The following slides will go over the process and results of this assignment.
+
+=== SLIDE 4 (Images: image28.png, image10.png) ===
+When designing the chassis, we must keep into consideration the placement of the existing parts, as well as the space the  vehicle  operator occupies. Space must also be left open for the purpose of the future inclusion of other necessary parts, such as the operator seat and mounts for the motor. 2. Design Choices
+
+=== SLIDE 5 (Images: image8.png, image13.png, image12.png) ===
+With regards to the final design, the back wheel is a little tight but still has clearance. A real design would probably allow for more clearance than currently presented. The chassis sits perfectly on the back wheel mounts. Although the upper part of the chassis is slightly higher than the bottom of the operator’s foot, it is far back enough to not intersect it. 2. Design Choices
+
+=== SLIDE 6 (Images: ) ===
+The Next two slides will show the stress plot for the first chassis version with no vertical back support, while the two slides after that will show the second chassis version that includes vertical support. For the first iteration the maximum stress was 5.233e^4 while the second iteration was 2.786e^3. Adding back supports significantly reduced the maximum stress applied which is an overall improvement. I am  190 lbs  so I chose my operator to weigh 200 lbs for simplicity (or to account for a backpack). I chose the weight of the fan assembly to be 400 lbs, double that of the operator. 3 . Stress Plot
+
+=== SLIDE 7 (Images: image2.png) ===
+3. Stress Plot Chassis V1
+
+=== SLIDE 8 (Images: image35.png) ===
+3. Stress Plot Chassis V1
+
+=== SLIDE 9 (Images: image16.png) ===
+3. Stress Plot Chassis V2
+
+=== SLIDE 10 (Images: image7.png) ===
+3. Stress Plot Chassis V2
+
+=== SLIDE 11 (Images: ) ===
+The Next two slides will show the Deflection plot for the first chassis version with no vertical back support, while the two slides after that will show the second chassis version that includes vertical support. The first iteration without the supports had a deflection of 5.512 inches while the second iteration with the added supports had a maximum deflection of 0.03444 inches. The supports were  definitely  a needed addition to the design for structural stability. 4 . Deflection Plot
+
+=== SLIDE 12 (Images: image11.png) ===
+4 . Deflection Plot Chassis V1
+
+=== SLIDE 13 (Images: image15.png) ===
+4. Deflection Plot Chassis V1
+
+=== SLIDE 14 (Images: image1.png) ===
+4. Deflection Plot Chassis V2
+
+=== SLIDE 15 (Images: image14.png) ===
+4. Deflection Plot Chassis V2
+
+=== SLIDE 16 (Images: ) ===
+The Next slide will show the Deflection plot for the first chassis version with no vertical back support, while the two slides after that will show the second chassis version that includes vertical support. The first iteration had a minimum factor of safety of 0.76, much too low to be considered safe and sturdy. The second iteration had a minimum factor of safety of 14, which is incredibly high. If this chassis were to go into production, switching to a cheaper material to save on cost would be a viable option. 5 . Factor of Safety Plot
+
+=== SLIDE 17 (Images: image6.png) ===
+5 . Factor of Safety Plot Chassis V1
+
+=== SLIDE 18 (Images: image18.png) ===
+5. Factor of Safety Plot Chassis V2
+
+=== SLIDE 19 (Images: image5.png) ===
+5. Factor of Safety Plot Chassis V2
+
+=== SLIDE 20 (Images: ) ===
+In conclusion, the final chassis is structurally stable and safe for use, especially with a FOS of 14. If this was for actual production, I would change the material used to allow for a more cost effective design, as well as allow for more tolerance for the back tire. 6 . Conclusion
+
+=== SLIDE 21 (Images: image3.png, image17.png) ===
+Mesh Images
+
+=== SLIDE 22 (Images: ) ===
+Sheet Metal  Seat Design & Nonlinear study By Lucas Lebron
+
+=== SLIDE 23 (Images: ) ===
+Contents 5 . Stress Plot & Animation 4 . Non Linear Data and Plots 3. Design Choices 2 . Assignment Overview 1 . Conclusion 6. Deflection Plot & Animation
+
+=== SLIDE 24 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing a seat frame for an electric airbike while considering parameters such as the placement of the operator, the seating area dimensions, and the space in between the operator and chassis. the space in between the operator and chassis must take into account the future addition of cushion. Aluminum 7075-T6 was used as the material. A gauge of 3 was used (thickness of 0.2294in). The following slides will go over the process and results of this assignment.
+
+=== SLIDE 25 (Images: image9.png, image4.png) ===
+To come up with the dimensions, I held a ruler up to my butt and estimated the necessary dimensions needed. I determined that a seat length of 12in. by a width of 12 in. and a height of 16in. was a good size to start. 2. Design Choices
+
+=== SLIDE 26 (Images: image20.png, image22.png) ===
+The final design is as shown. 2. Design Choices The distance from the chassis to the  bottom  of the  operator was 3.32in. so I rounded the distance to 3.25in. To account for 1 inch worth of cushion the distance between the two plates was set to 2.25in. The weight of my operator was the same as was for the chassis, which is 200lbs. To calculate how much force would be applied to the back rest, I applied 200*(1 - 0.75) and got a weight of 50 lbs.
+
+=== SLIDE 27 (Images: image24.png, image19.png) ===
+2. Design Choices
+
+=== SLIDE 28 (Images: ) ===
+The next four slides will show the Data and graphs that were used to model the non linear load distribution on to the frame. The first two will show the main seat while the following two will show the back rest. The main weight goes from 200 lbs to 150 lbs, while the  backrest  weight goes to 50lbs; both over a 2 second time frame. 3. Non-linear Data & Plots
+
+=== SLIDE 29 (Images: image26.png) ===
+
+
+=== SLIDE 30 (Images: image23.png) ===
+
+
+=== SLIDE 31 (Images: image27.png) ===
+
+
+=== SLIDE 32 (Images: image31.png) ===
+
+
+=== SLIDE 33 (Images: ) ===
+The next four slides will show the stress and displacement plots, as well as their animations. All animation videos will also be attached in the  submission  box in case of playback error. 4 . Stress Plots and animations
+
+=== SLIDE 34 (Images: image21.png) ===
+
+
+=== SLIDE 35 (Images: image37.jpg) ===
+style.visibility
+
+=== SLIDE 36 (Images: image32.png) ===
+
+
+=== SLIDE 37 (Images: image33.jpg) ===
+style.visibility
+
+=== SLIDE 38 (Images: ) ===
+6. Conclusion The Factor of Safety (FOS) can be calculated as FOS = Yield Strength /  Maximum  Stress experienced. In this case that would be 7.324e^04 psi / 3.934e^+04 psi → FOS = 1.862                (for Aluminum 7075-T6). A 1.862 FOS isn’t too bad but a support and suspension will need to be added so that the large amount of displacement can mitigated. It will also allow is to raise the FOS and if needed, allow us to switch to a cheaper material without sacrificing safety.
+
+=== SLIDE 39 (Images: ) ===
+Seat Suspension Design and Fatigue Study By Lucas Lebron
+
+=== SLIDE 40 (Images: ) ===
+Contents 5 . Version 1 Simulation Plot Results 4 . Load & Fixtures 3. Assembly integration 2 . Assignment Overview 1 . Conclusion 6. Version 2 Simulation Plot Results
+
+=== SLIDE 41 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing a seat suspension for our seat frame while considering parameters such as the operator weight, the space allocated, as well as general visual appeal. Aluminum 7075-T6 was used as the material. The following slides will go over the process and results of this assignment.
+
+=== SLIDE 42 (Images: image25.png) ===
+2. Assembly Integration
+
+=== SLIDE 43 (Images: image30.png) ===
+2. Assembly Integration
+
+=== SLIDE 44 (Images: ) ===
+3. Load and Fixtures The next three slides show the load and fixture points, as well as the setup for the “events” table data. The main load was 200 lbs while the secondary load applied to the backrest was 25% of the main load (25 lbs)
+
+=== SLIDE 45 (Images: image29.png) ===
+
+
+=== SLIDE 46 (Images: image34.png) ===
+
+
+=== SLIDE 47 (Images: image52.png) ===
+
+
+=== SLIDE 48 (Images: image45.png) ===
+The next 6 slides will show the stress, displacement, minimum FOS, damage, and life plots of the first iteration. You will notice that the damage and life plots are uniform throughout the part. I got an error that I was unable to remedy. I think it might be the case that the material chosen was to strong and it could withstand “infinite” cycles. 4. Version 1 Simulation Plot Results
+
+=== SLIDE 49 (Images: image40.png) ===
+
+
+=== SLIDE 50 (Images: image38.png) ===
+
+
+=== SLIDE 51 (Images: image51.png) ===
+
+
+=== SLIDE 52 (Images: image41.png) ===
+
+
+=== SLIDE 53 (Images: image39.png) ===
+
+
+=== SLIDE 54 (Images: image57.png) ===
+
+
+=== SLIDE 55 (Images: ) ===
+The next 7 slides will show the mesh, stress, displacement, minimum FOS, damage, and life plots of the updated design. My only concern is that I couldn’t find a way to prevent the main person load from being distributed all the way back to the backrest, which I hypothesize will alter the distribution of stress, as well as the maximum deflection due to the reduction of the distance of the moment between the person load an the back rest. I had to alter my design to be a flat connection rather than your curved one as solidworks was not allowing me to properly connect an arc to the pre-existing backrest arc. 5 . Version 2 Simulation Plot Results
+
+=== SLIDE 56 (Images: image43.png) ===
+
+
+=== SLIDE 57 (Images: image50.png) ===
+
+
+=== SLIDE 58 (Images: image48.png) ===
+
+
+=== SLIDE 59 (Images: image46.png) ===
+
+
+=== SLIDE 60 (Images: image49.png) ===
+
+
+=== SLIDE 61 (Images: image36.png) ===
+
+
+=== SLIDE 62 (Images: image42.png) ===
+
+
+=== SLIDE 63 (Images: ) ===
+6. Conclusion The maximum stress went from 3.013e^4 psi to 1.788e^4 psi; resulting in a 40.66% decrease in maximum stress. The maximum displacement went from 0.66 in to 0.40 in; a 39.39% reduction in maximum deflection. The minimum FOS went from 2.432 to 4.097; a 168% increase. Unfortunately, due to to the errors with the damage and cycle life plots, it is unknown exactly how much longer the suspension could last. The second iteration would obviously endure more loading cycles due the decrease in maximum stress and deflection.
+
+=== SLIDE 64 (Images: ) ===
+Battery Pack Design and Thermal Study  By Lucas Lebron
+
+=== SLIDE 65 (Images: ) ===
+Contents 5 . Thermal Study 4 . Mesh & Setup 3. Assembly integration 2 . Assignment Overview 1 . Conclusion
+
+=== SLIDE 66 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing a battery pack that will eventually power out motor. Each cell will put out .3 W and the convection coefficient is 10 W/m*K. Rudimentary fins will be implemented for a temporary cooling solution. The following slides will go over the process and results of this assignment.
+
+=== SLIDE 67 (Images: image44.png) ===
+2. Assembly Integration
+
+=== SLIDE 68 (Images: ) ===
+3. Mesh & Setup The next three slides show the positions of the thermal and convection load values with their respective locations. It also shows the mesh. For some reason the transparency feature was not applying to the part when I show the mesh so I had to include the top.
+
+=== SLIDE 69 (Images: image47.png) ===
+
+
+=== SLIDE 70 (Images: image56.png) ===
+
+
+=== SLIDE 71 (Images: image53.png) ===
+
+
+=== SLIDE 72 (Images: ) ===
+The next two slides show the minimum and maximum temperature extremes experienced. I’ve included the non-section view as well because the minimum temperature occurred on the top edge of my plate which didn’t show up clearly in the section view that shows the maximum temp. 4. Thermal Study
+
+=== SLIDE 73 (Images: image61.png) ===
+
+
+=== SLIDE 74 (Images: image65.png) ===
+
+
+=== SLIDE 75 (Images: ) ===
+5. Conclusion The maximum temperature was recorded to be 770,100 degrees  fahrenheit . This level of temperature would  obviously  not be reached in reality. In real-world operation, the battery pack would undergo catastrophic failure via Thermal Runaway long before reaching the simulated temperature. A new heating solution will be needed if this battery pack is to be used on the bike.
+
+=== SLIDE 76 (Images: ) ===
+External Flow Over a Fixed Wing  By Lucas Lebron
+
+=== SLIDE 77 (Images: ) ===
+Contents 5 . FEA Charts 4 . Flow Simulation Results 3. Assembly integration 2 . Assignment Overview 1 . Conclusion
+
+=== SLIDE 78 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing an airfoil from scratch to create wings  for  our airbike. The wings will be fixed with no on-board flight control surfaces. A Flow study will be done to determine the effectiveness of the airfoil with regards to parameters such as pressure, force, and lift.
+
+=== SLIDE 79 (Images: image55.png) ===
+2. Assembly Integration
+
+=== SLIDE 80 (Images: ) ===
+3. Flow Simulation Results. The next ten slides will show the setup and results of the flow simulation. The Velocity flow trajectory and particle study. mp4’s will be included in the submission just in case of playback errors.  The original submission was done at 55mph, the new one in this is done at 75mph.
+
+=== SLIDE 81 (Images: image60.png) ===
+
+
+=== SLIDE 82 (Images: image58.png) ===
+
+
+=== SLIDE 83 (Images: image59.png) ===
+
+
+=== SLIDE 84 (Images: image63.png) ===
+
+
+=== SLIDE 85 (Images: image68.png) ===
+
+
+=== SLIDE 86 (Images: image64.png) ===
+
+
+=== SLIDE 87 (Images: image66.png) ===
+
+
+=== SLIDE 88 (Images: image67.png) ===
+
+
+=== SLIDE 89 (Images: image62.jpg) ===
+style.visibility
+
+=== SLIDE 90 (Images: image54.jpg) ===
+style.visibility
+
+=== SLIDE 91 (Images: ) ===
+The next three slides will show the Stress, Displacement, and FOS charts.  4. FEA Charts
+
+=== SLIDE 92 (Images: image71.png) ===
+
+
+=== SLIDE 93 (Images: image70.png) ===
+
+
+=== SLIDE 94 (Images: image77.png) ===
+
+
+=== SLIDE 95 (Images: ) ===
+5. Conclusion The maximum stress experienced was at the tip of the wing at 4,795 psi The maximum displacement also happened at the tip of the wing coming in around 0.6859 inches The minimum FOS came out to be around 0.605. A factor of safety this low would be too unsafe for use and indicates that a much stronger material should be used as opposed to balsa wood. 
+
+=== SLIDE 96 (Images: ) ===
+Prop and External Rotating Region Over Time By Lucas Lebron
+
+=== SLIDE 97 (Images: ) ===
+Contents 5 . Flow Simulation Results 4 . Flow Simulation Set up 3. Assembly integration 2 . Assignment Overview 1 . Conclusion
+
+=== SLIDE 98 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing a fan to propel the airbike forward. This includes the airfoils that make up the fan, as well as the cage. A Flow study will be done to determine the effectiveness of the fan with regards to parameters such as pressure and force.
+
+=== SLIDE 99 (Images: image87.png) ===
+2. Assembly Integration
+
+=== SLIDE 100 (Images: ) ===
+3. Flow Simulation Setup The next five slides will show the setup for the flow simulation that will ensue.
+
+=== SLIDE 101 (Images: image69.png) ===
+
+
+=== SLIDE 102 (Images: image72.png) ===
+
+
+=== SLIDE 103 (Images: image78.png) ===
+
+
+=== SLIDE 104 (Images: image82.png) ===
+
+
+=== SLIDE 105 (Images: image73.png) ===
+
+
+=== SLIDE 106 (Images: ) ===
+The next six slides will show the Cut and Flow trajectory plots, as well as the particle study.  4. Flow Simulation Results
+
+=== SLIDE 107 (Images: image75.png) ===
+
+
+=== SLIDE 108 (Images: image84.png) ===
+
+
+=== SLIDE 109 (Images: image76.png) ===
+
+
+=== SLIDE 110 (Images: image90.png) ===
+
+
+=== SLIDE 111 (Images: image74.jpg) ===
+style.visibility
+
+=== SLIDE 112 (Images: image80.png) ===
+
+
+=== SLIDE 113 (Images: ) ===
+5. Conclusion We can see in the previous slide that the average normal force that the fan outputs is 798 lbf. Executing the mass properties command, the bike is currently around 3000 lbs. An 800 lbf would not be nearly enough to get the bike moving, but there are a lot of ways to optimize the weight. For one, the wings are still considered a solid. I changed their material to Aluminum 6061-T6 due to the balsa version having a FOS of 0.605; and a 8-10ft wing of solid metal on each side is not helping the current situation. Furthermore we could increase the size of the fan, optimize the design and amount of blades used, as well as go throughout the assembly and choose lighter materials to use, as long as the FOS stays above a certain threshold.
+
+=== SLIDE 114 (Images: ) ===
+Battery Pack Heat Exchanger By Lucas Lebron
+
+=== SLIDE 115 (Images: ) ===
+Contents Conclusion 4 . Flow Simulation Results 3. Flow Simulation Setup 2 . Assignment Overview 1 .
+
+=== SLIDE 116 (Images: ) ===
+Assignment  Overview In this assignment we are tasked with designing a heat exchanger for the purpose of managing the thermal profile for the existing battery pack on our airbike.
+
+=== SLIDE 117 (Images: ) ===
+2. Flow Simulation Setup The next 11 slides will show the setup for the flow simulation. The pipe solids are copper but the solid material used for the pipe bodies  in the flow study  is Aluminum as  explicitly  instructed. Rather than Inlet velocity I chose to use Inlet Mass Flow. After some research, I found that  liquid density changes with temperature variations inside the pipe, and that setting a constant velocity inlet can lead to artificial fluctuations in actual mass throughput. Volume flow rate expands or contracts as thermal gradients alter fluid density, whereas mass flow rate remains strictly constant across any cross-section. A mass flow rate of 1.17 lb/s was calculated for  the R134  with the pipe                                                      cross-section of 0.75 in, and the 5 ft/s velocity used in the video. A mass flow rate of 0.35 lb/s was calculated for the oil at 2 ft/s
+
+=== SLIDE 118 (Images: image83.png) ===
+
+
+=== SLIDE 119 (Images: image81.png) ===
+
+
+=== SLIDE 120 (Images: image79.png) ===
+
+
+=== SLIDE 121 (Images: image93.png) ===
+
+
+=== SLIDE 122 (Images: image85.png) ===
+
+
+=== SLIDE 123 (Images: image95.png) ===
+
+
+=== SLIDE 124 (Images: image98.png) ===
+
+
+=== SLIDE 125 (Images: image86.png) ===
+
+
+=== SLIDE 126 (Images: image89.png) ===
+
+
+=== SLIDE 127 (Images: image100.png) ===
+
+
+=== SLIDE 128 (Images: image99.png) ===
+
+
+=== SLIDE 129 (Images: ) ===
+The next six slides will show the simulation results; including the surface plot, as well as the flow and particle studies. 3. Flow Simulation Results
+
+=== SLIDE 130 (Images: image88.png) ===
+
+
+=== SLIDE 131 (Images: image96.png) ===
+
+
+=== SLIDE 132 (Images: image91.png) ===
+
+
+=== SLIDE 133 (Images: image92.png) ===
+
+
+=== SLIDE 134 (Images: image97.jpg) ===
+style.visibility
+
+=== SLIDE 135 (Images: image94.png) ===
+
+
+=== SLIDE 136 (Images: ) ===
+4 . Conclusion We can see that in the surface plot, the outlet for the R134a is -9.81 F. I initially thought this was an error, but after some research this actually seems to be intended. The localized minimum temperature reading of -9.81 F at the outlet is caused by rapid expansion cooling (flashing) resulting from an unpressurized exit boundary condition. Liquid R-134a at an inlet temperature of 40 F requires a saturation pressure of approximately 49.7 psia to remain in the liquid phase without vaporizing. Discharging into standard atmospheric pressure (14.7 psia or 1 atm) forces the refrigerant's saturation temperature down toward around -15 F, triggering localized phase-change cooling as pressure drops near the exit. Adjusting the outlet boundary condition to reflect a realistic pressurized loop 50 - 60 psia would eliminate this expansion artifact and would stabilize the liquid flow domain.
+
