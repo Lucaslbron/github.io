@@ -2,6 +2,7 @@
 layout: default
 title: Electric Airbike Structural, Aerodynamic, & Thermal Simulations
 permalink: /projects/airbike.html
+toc: true
 ---
 
 # Electric Airbike Structural, Aerodynamic, & Thermal Simulations
@@ -255,7 +256,7 @@ The electric airbike's powertrain relies on a central high-density battery pack 
 A thermal study was conducted to evaluate whether passive air convection and exterior surface fins could adequately cool the battery pack during peak power draw:
 
 - **Heat Generation:** $0.30\text{ W}$ per cell ($60\text{ W}$ total pack heat generation, equivalent to an aggressive volumetric thermal input of $44\text{ BTU/s}$ applied across the cell array bodies).
-- **Convective Boundary Condition:** Free air convection across external aluminum enclosure surfaces with heat transfer coefficient $h = 10\text{ W/m}^2\cdot\text{K}$ ($3.4 \times 10^{-6}\text{ BTU/s}\cdot\text{in}^2\cdot^\circ\text{F}$).
+- **Convective Boundary Condition:** Free air convection across external aluminum enclosure surfaces with heat transfer coefficient $h = 10\text{ W/m}^2\cdot\text{K}$ ($3.4 \times 10^{-6}\text{ BTU/(s}\cdot\text{in}^2\cdot{}^\circ\text{F)}$).
 
 ![Battery Pack Thermal Runaway FEA]({{ '/assets/images/airbike/battery-pack-thermal-runaway-fea.png' | relative_url }})
 
@@ -263,7 +264,7 @@ A thermal study was conducted to evaluate whether passive air convection and ext
 
 ### Simulation Findings & Physical Interpretation
 
-The steady-state solver converged to a peak internal temperature of **$770,100^\circ\text{F}$** ($7.701 \times 10^5^\circ\text{F}$), with a minimum temperature of $418,900^\circ\text{F}$ along the top enclosure edge.
+The steady-state solver converged to a peak internal temperature of **770,100 °F** ($7.701 \times 10^5\text{ }^\circ\text{F}$), with a minimum temperature of **418,900 °F** along the top enclosure edge.
 
 > **Engineering Judgment:** In physical reality, lithium-ion battery cells undergo irreversible catastrophic failure via **thermal runaway** between $130^\circ\text{C}$ and $150^\circ\text{C}$ ($266^\circ\text{F} - 302^\circ\text{F}$), resulting in electrolyte boiling, cell venting, and combustion. 
 > 

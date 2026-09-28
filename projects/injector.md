@@ -2,6 +2,7 @@
 layout: default
 title: Impinging Injector for Liquid Rocket Booster
 permalink: /projects/injector/
+toc: true
 ---
 
 # Impinging Injector for a 250 lbf Liquid Rocket Engine

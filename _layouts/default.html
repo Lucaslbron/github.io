@@ -50,13 +50,22 @@
       z-index: 100;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    h1[id], h2[id], h3[id] {
+      scroll-margin-top: 5rem;
+    }
+
     .header-container {
-      max-width: 900px;
+      max-width: {% if page.toc %}1240px{% else %}900px{% endif %};
       margin: 0 auto;
       padding: 0.85rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: max-width 0.2s ease;
     }
 
     .site-brand a {
@@ -84,6 +93,139 @@
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1.25rem;
+    }
+
+    /* Table of Contents & Report Layout */
+    .report-layout-wrapper {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 2.75rem;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .report-content {
+      flex: 1 1 0%;
+      min-width: 0;
+      max-width: 880px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-sidebar {
+      width: 270px;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .toc-sticky-container {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5rem;
+      max-height: calc(100vh - 6.5rem);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-bottom: 1rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-color) transparent;
+    }
+
+    .toc-sticky-container::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .toc-sticky-container::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .toc-card {
+      background-color: rgba(22, 25, 34, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1rem 0.85rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .toc-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-hover);
+      padding-bottom: 0.65rem;
+      margin-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .toc-icon {
+      flex-shrink: 0;
+      color: var(--accent-hover);
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .toc-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-link {
+      display: block;
+      font-size: 0.82rem;
+      line-height: 1.35;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem 0.35rem 0.85rem;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+      border-radius: 0 4px 4px 0;
+      transition: all 0.15s ease;
+      word-break: break-word;
+    }
+
+    .toc-link:hover {
+      color: #ffffff;
+      background-color: rgba(59, 130, 246, 0.08);
+      border-left-color: var(--accent-hover);
+      text-decoration: none;
+    }
+
+    .toc-link.active {
+      color: #60a5fa;
+      font-weight: 600;
+      background-color: rgba(59, 130, 246, 0.12);
+      border-left-color: #3b82f6;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1060px) {
+      .report-layout-wrapper {
+        display: block;
+        max-width: 900px;
+        padding: 0 1.25rem;
+        margin: 2rem auto;
+      }
+      .report-content {
+        max-width: 100%;
+      }
+      .toc-sidebar {
+        display: none;
+      }
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -233,9 +375,161 @@
     </div>
   </header>
 
+  {% if page.toc %}
+  <div class="report-layout-wrapper">
+    <main class="site-content report-content" id="report-content">
+      {{ content }}
+    </main>
+    <aside class="toc-sidebar" id="toc-sidebar" aria-label="Table of Contents">
+      <div class="toc-sticky-container">
+        <div class="toc-card">
+          <div class="toc-title">
+            <svg class="toc-icon" viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>On This Page</span>
+          </div>
+          <nav class="toc-nav" id="toc-nav">
+            <!-- Dynamically populated from ## headers -->
+          </nav>
+        </div>
+      </div>
+    </aside>
+  </div>
+  {% else %}
   <main class="site-content">
     {{ content }}
   </main>
+  {% endif %}
+
+  {% if page.toc %}
+  <script>
+    (function() {
+      function initTOC() {
+        const tocNav = document.getElementById('toc-nav');
+        if (!tocNav) return;
+
+        const content = document.getElementById('report-content');
+        if (!content) return;
+
+        // Parse all ## headers (h2)
+        const headings = content.querySelectorAll('h2');
+        if (!headings || headings.length === 0) {
+          const sidebar = document.getElementById('toc-sidebar');
+          if (sidebar) sidebar.style.display = 'none';
+          return;
+        }
+
+        const list = document.createElement('ul');
+        list.className = 'toc-list';
+
+        const items = [];
+
+        headings.forEach(function(heading, index) {
+          // Ensure heading has an ID
+          if (!heading.id) {
+            heading.id = heading.textContent
+              .toLowerCase()
+              .trim()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/[\s_-]+/g, '-')
+              .replace(/^-+|-+$/g, '') || ('section-' + (index + 1));
+          }
+
+          const li = document.createElement('li');
+          li.className = 'toc-item';
+
+          const link = document.createElement('a');
+          link.className = 'toc-link';
+          link.href = '#' + heading.id;
+          link.textContent = heading.textContent.trim();
+          link.setAttribute('data-target', heading.id);
+
+          // Smooth scrolling on click
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = heading.id;
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              if (history.pushState) {
+                history.pushState(null, null, '#' + targetId);
+              } else {
+                location.hash = '#' + targetId;
+              }
+            }
+          });
+
+          li.appendChild(link);
+          list.appendChild(li);
+          items.push({ heading: heading, link: link });
+        });
+
+        tocNav.appendChild(list);
+
+        // Scroll spy to highlight active header while scrolling
+        let ticking = false;
+        function updateActiveLink() {
+          const scrollPosition = window.scrollY + 130; // offset below sticky header
+          let activeIndex = -1;
+
+          for (let i = 0; i < items.length; i++) {
+            const top = items[i].heading.getBoundingClientRect().top + window.scrollY;
+            if (top <= scrollPosition) {
+              activeIndex = i;
+            } else {
+              break;
+            }
+          }
+
+          items.forEach(function(item, idx) {
+            if (idx === activeIndex) {
+              item.link.classList.add('active');
+            } else {
+              item.link.classList.remove('active');
+            }
+          });
+
+          // Auto-scroll TOC container if the active link is scrolled out of view
+          if (activeIndex >= 0) {
+            const activeLink = items[activeIndex].link;
+            const stickyContainer = document.querySelector('.toc-sticky-container');
+            if (stickyContainer && stickyContainer.scrollHeight > stickyContainer.clientHeight) {
+              const linkRect = activeLink.getBoundingClientRect();
+              const containerRect = stickyContainer.getBoundingClientRect();
+              if (linkRect.top < containerRect.top + 20 || linkRect.bottom > containerRect.bottom - 20) {
+                activeLink.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+              }
+            }
+          }
+
+          ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateActiveLink);
+            ticking = true;
+          }
+        }, { passive: true });
+
+        // Initial check
+        updateActiveLink();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTOC);
+      } else {
+        initTOC();
+      }
+    })();
+  </script>
+  {% endif %}
 
   <footer class="site-footer">
     <p>Lucas Lebron • Aerospace & Mechanical Engineering Portfolio</p>
