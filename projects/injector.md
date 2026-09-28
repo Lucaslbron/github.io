@@ -196,7 +196,40 @@ These calculations established the initial outlet locations and spacing used to 
 
 The analytical dimensions established the starting point, but the injector required significant CAD development to integrate the fluid passages, mechanical attachment, sealing, external interfaces, and manufacturing requirements.
 
-![Injector CAD Assembly]({{ '/assets/images/injector/injector-viewport.png' | relative_url }})
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+<div id="cad-viewer" style="margin: 1.75rem 0; background: #181926; border-radius: 12px; padding: 1.25rem; border: 1px solid #2e3048; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+    <h4 style="margin: 0; color: #f8fafc; font-size: 1.05rem;">
+      Interactive 3D CAD Assembly Viewer
+    </h4>
+    <a href="{{ '/projects/injector-cad-viewer.html' | relative_url }}" style="color: #60a5fa; text-decoration: none; font-size: 0.85rem; font-weight: 500;">
+      Open Fullpage 3D Viewer ↗
+    </a>
+  </div>
+  <model-viewer
+    src="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}"
+    poster="{{ '/assets/images/injector/injector-viewport.png' | relative_url }}"
+    alt="3D CAD Assembly of Impinging Injector"
+    auto-rotate
+    rotation-per-second="25deg"
+    camera-controls
+    touch-action="pan-y"
+    shadow-intensity="1.5"
+    exposure="1.15"
+    camera-orbit="45deg 55deg 105%"
+    style="width: 100%; height: 480px; background: radial-gradient(circle at center, #25283b 0%, #11121a 100%); border-radius: 8px; outline: none;">
+    <div slot="progress-bar" style="height: 4px; background: #3b82f6;"></div>
+  </model-viewer>
+  <div style="margin-top: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: #94a3b8;">
+    <span>🖱️ <strong>Interactive:</strong> Click + drag to orbit • Scroll to zoom • Two-finger drag to pan</span>
+    <a href="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}" download style="color: #60a5fa; text-decoration: none;">
+      ⬇ Download .GLB (300 KB)
+    </a>
+  </div>
+</div>
+
+![Injector CAD Cutaway Viewport]({{ '/assets/images/injector/injector-viewport.png' | relative_url }})
 
 *Final two-plate injector assembly. The cutaway view exposes the internal propellant passages and injector outlet geometry.*
 
@@ -379,9 +412,9 @@ The following documents provide the detailed technical record behind this case s
 ### Project Documentation
 
 - **[Preliminary Design Review (PDR)]({{ '/assets/docs/injector/liquid-propulsion-preliminary-design-review.pdf' | relative_url }})**
-- **[Injector CAD Model Assembly]({{ '/assets/images/injector/injector-viewport.png' | relative_url }})**
-- **[Injector Manufacturing Drawings & Plan (PDF)]({{ '/assets/docs/injector/injector-manufacturing-plan.pdf' | relative_url }})**
+- **[Injector CAD Model Assembly (Interactive 3D Viewer)]({{ '/projects/injector-cad-viewer.html' | relative_url }})** • [Direct 3D Model (.GLB)]({{ '/assets/models/injector/injector-assembly.glb' | relative_url }})
+- **[Injector Manufacturing Drawings & Plan (PDF)]({{ '/assets/docs/injector/impinging-injector-drawings.pdf' | relative_url }})**
 - **[Injector Sizing Calculations (MATLAB)]({{ '/assets/docs/injector/coaxial-swirl-injector-sizing.m' | relative_url }})**
-- **[Original Coaxial Swirl Injector Drawings]({{ '/assets/images/injector/coaxial-swirl-drawing.jpg' | relative_url }})**
+- **[Original Coaxial Swirl Injector Drawings & Manufacturing Plan (PDF)]({{ '/assets/docs/injector/coaxial-swirl-manufacturing-plan.pdf' | relative_url }})**
 
 > **Note:** The case study above is intended to explain the engineering process and my contribution. The supporting documents provide the complete technical record, detailed dimensions, and design documentation.
