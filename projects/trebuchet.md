@@ -194,7 +194,7 @@ Together, these constraints significantly reduced the amount of time available f
 
 ---
 
-## Engineering Takeaways & Lessons Learned
+## Lessons Learned & Engineering Takeaways
 
 Rather than presenting an idealized narrative, this project is meant to show a realistic account of the design-build-test experience that revealed critical principles of mechanical engineering and project management:
 
