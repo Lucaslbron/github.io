@@ -1,11 +1,15 @@
-import zipfile, re
+import zipfile, re, os
 import xml.etree.ElementTree as ET
 
-z = zipfile.ZipFile('Airbike Content/Final Presentation Lucas Lebron.pptx')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+pptx_path = os.path.join(base_dir, 'Final Presentation Lucas Lebron.pptx')
+dump_path = os.path.join(base_dir, 'slides_dump.txt')
+
+z = zipfile.ZipFile(pptx_path)
 slide_files = sorted([f for f in z.namelist() if f.startswith('ppt/slides/slide') and f.endswith('.xml')],
                      key=lambda x: int(re.search(r'slide(\d+)\.xml', x).group(1)))
 
-with open('Airbike Content/slides_dump.txt', 'w', encoding='utf-8') as out:
+with open(dump_path, 'w', encoding='utf-8') as out:
     for sf in slide_files:
         num = re.search(r'slide(\d+)\.xml', sf).group(1)
         tree = ET.fromstring(z.read(sf))
@@ -26,4 +30,4 @@ with open('Airbike Content/slides_dump.txt', 'w', encoding='utf-8') as out:
         out.write(f'=== SLIDE {num} (Images: {img_str}) ===\n')
         out.write(full_text + '\n\n')
 
-print(f'Successfully dumped {len(slide_files)} slides to Airbike Content/slides_dump.txt')
+print(f'Successfully dumped {len(slide_files)} slides to {dump_path}')

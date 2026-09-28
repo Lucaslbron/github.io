@@ -1,10 +1,11 @@
 import zipfile, os, re
 from PIL import Image
 
-z = zipfile.ZipFile('Airbike Content/Final Presentation Lucas Lebron.pptx')
-os.makedirs('Airbike Content/extracted_media', exist_ok=True)
+base_dir = os.path.dirname(os.path.abspath(__file__))
+z = zipfile.ZipFile(os.path.join(base_dir, 'Final Presentation Lucas Lebron.pptx'))
+os.makedirs(os.path.join(base_dir, 'extracted_media'), exist_ok=True)
 
-with open('Airbike Content/slides_dump.txt', 'r', encoding='utf-8') as f:
+with open(os.path.join(base_dir, 'slides_dump.txt'), 'r', encoding='utf-8') as f:
     text = f.read()
 
 slides = text.split('=== SLIDE ')
