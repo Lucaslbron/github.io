@@ -12,7 +12,7 @@ permalink: /projects/injector-quick-overview.html
 
 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.25rem 0;">
   <a href="{{ '/projects/injector/' | relative_url }}" style="background: #3b82f6; color: #ffffff; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-    Read Full Technical Deep-Dive (20-min read) →
+    Read Full Technical Deep-Dive (15-min read) →
   </a>
   <a href="{{ '/projects/injector-cad-viewer.html' | relative_url }}" style="background: #232736; color: #93c5fd; border: 1px solid #3b82f6; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
     Launch Interactive 3D Viewer ⛶
@@ -99,7 +99,6 @@ For detailed derivations, equations, and full drawings, refer to the technical d
 - **[Impinging Injector Manufacturing Drawings (PDF)]({{ '/assets/docs/injector/impinging-injector-drawings.pdf' | relative_url }})**
 - **[Original Coaxial Swirl Injector Drawings & Manufacturing Plan (PDF)]({{ '/assets/docs/injector/coaxial-swirl-manufacturing-plan.pdf' | relative_url }})**
 - **[Injector Sizing Tool (MATLAB .m)]({{ '/assets/docs/injector/coaxial-swirl-injector-sizing.m' | relative_url }})**
-- **[SolidWorks Assembly (.SLDASM)]({{ '/assets/models/injector/injector-assembly.sldasm' | relative_url }})** • **[3D Model (.GLB)]({{ '/assets/models/injector/injector-assembly.glb' | relative_url }})**
 
 ---
 
