@@ -128,7 +128,6 @@ The interactive 3D model above captures the complete vehicle architecture engine
 - **[Full Technical Deep-Dive Report]({{ '/projects/airbike.html' | relative_url }})**
 - **[Electric Airbike Quick Overview]({{ '/projects/airbike-quick-overview.html' | relative_url }})**
 - **[Electric Airbike Full Technical Presentation (PPTX)]({{ '/assets/docs/airbike/electric-airbike-final-presentation.pptx' | relative_url }})**
-- **[Electric Airbike Deep Dive Summary Report (PDF)]({{ '/assets/docs/airbike/airbike-deep-dive-summary.pdf' | relative_url }})**
 
 ---
 

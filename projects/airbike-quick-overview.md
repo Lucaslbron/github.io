@@ -18,9 +18,6 @@ permalink: /projects/airbike-quick-overview.html
   <a href="{{ '/projects/airbike-cad-viewer.html' | relative_url }}" style="background: #232736; color: #93c5fd; border: 1px solid #3b82f6; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
     Launch Interactive 3D Viewer ⛶
   </a>
-  <a href="{{ '/assets/docs/airbike/airbike-deep-dive-summary.pdf' | relative_url }}" style="background: #232736; color: #93c5fd; border: 1px solid #3b82f6; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-    Download Deep Dive Summary (PDF) 📄
-  </a>
   <a href="{{ '/' | relative_url }}" style="background: #1c202c; color: #94a3b8; border: 1px solid #2d3345; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
     ← Back to Home
   </a>
@@ -95,8 +92,6 @@ Rather than treating simulation as a post-design validation step, computational 
 - **[Electric Airbike CAD Model Assembly (Interactive 3D Viewer)]({{ '/projects/airbike-cad-viewer.html' | relative_url }})** • [Direct 3D Model (.GLB)]({{ '/assets/models/airbike/airbike-assembly.glb' | relative_url }})
 - **[Electric Airbike Full Technical Presentation (PPTX)]({{ '/assets/docs/airbike/electric-airbike-final-presentation.pptx' | relative_url }})**  
   *136-slide original presentation containing all setup screens, boundary conditions, and full result plots.*
-- **[Electric Airbike Deep Dive Summary Report (PDF)]({{ '/assets/docs/airbike/airbike-deep-dive-summary.pdf' | relative_url }})**  
-  *Executive engineering summary report.*
 
 ---
 
