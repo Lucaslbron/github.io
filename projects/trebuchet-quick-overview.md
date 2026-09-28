@@ -39,7 +39,7 @@ Served as Team Captain leading 10 engineering students through the design, draft
 | **Event** | School-Wide Engineering Dynamics Trebuchet Competition |
 | **Objective** | Maximum horizontal range with 10 lb pumpkin |
 | **Team Size** | 10 Engineering Students |
-| **Budget Constraint** | $500 max ($462.14 allocated in BOM; $37.86 reserve) |
+| **Budget Constraint** | \$500 max ($462.14 allocated in BOM; $37.86 reserve) |
 | **Development Time** | ~1 Month (concurrent design, procurement, and build) |
 | **Architecture** | Floating-Arm Trebuchet (Linear Drop Channel) |
 | **Structural Frame** | 90" vertical mast, 45.5" base spread, 30° diagonal bracing |
@@ -56,7 +56,7 @@ Served as Team Captain leading 10 engineering students through the design, draft
 - Pre-calculated fastener locations, dual bolt-length specifications (3/8"-16 × 8" through-bolts and 1/2"-13 × 4" shear bolts), and lumber cut-lists to minimize waste.
 
 ### 2. Rigorous Budget Allocation
-- Formulated a pre-procurement Bill of Materials across 13 line items totaling $462.14, maintaining a $37.86 contingency reserve under the non-negotiable $500 cap.
+- Formulated a pre-procurement Bill of Materials across 13 line items totaling \$462.14, maintaining a $37.86 contingency reserve under the non-negotiable $500 cap.
 
 ### 3. Hands-On Wood & Metal Fabrication
 - Concurrently fabricated frame subassemblies on the staging grounds, aligning twin vertical guide tracks, drilling perpendicular laminated bores, and burnishing paste finishing wax to reduce rolling friction.

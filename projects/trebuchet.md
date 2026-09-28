@@ -26,7 +26,7 @@ toc: true
 | **Primary Objective** | Design and fabricate a mechanical launcher to maximize the launch distance of a 10 lb pumpkin |
 | **Role & Responsibilities** | Team Captain, structural layout, fastener planning, material procurement, fabrication, and field testing |
 | **Team Size** | 10 Undergraduate Engineering Students |
-| **Budget Constraint** | $500 limit ($462.14 allocated in BOM; $37.86 contingency reserve) |
+| **Budget Constraint** | \$500 limit ($462.14 allocated in BOM; $37.86 contingency reserve) |
 | **Development Window** | ~1 Month (concurrent design, procurement, fabrication, and validation) |
 | **Mechanism Architecture** | Floating-Arm Trebuchet (FAT) with dual vertical rolling drop tracks |
 | **Structural Materials** | Commercial dimensional lumber (2×4 Whitewood, 2×4 & 2×8 Southern Yellow Pine) |
