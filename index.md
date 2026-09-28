@@ -26,6 +26,7 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Overview:** Designed and evaluated a bi-propellant Impinging injector assembly, with emphasis on atomization efficiency, spray cone angle, and pressure drop.
 - **Methods:** Developed the injector geometry and evaluated its fluid-flow and atomization characteristics through engineering analysis and simulation.
 - **Tools:** SolidWorks, ANSYS
+- [Read Quick Overview →]({{ '/projects/injector-quick-overview.html' | relative_url }})
 - [Read Full Project Report →]({{ '/projects/injector/' | relative_url }})
 
 ---
@@ -35,6 +36,7 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Overview:** A Comprehensive, simulation-driven design of an electric airbike, using SolidWorks to transition from initial CAD geometries to optimized, data-backed engineering solutions.
 - **Methods:** Performed structural FEA, CFD, and thermal simulations to evaluate and refine major vehicle components, including the chassis, seat, airfoils, propeller, heat exchanger, and battery system.
 - **Tools:** SolidWorks, SolidWorks Flow Simulation, FEA Stress Analysis, Thermal Analysis
+- [Read Quick Overview →]({{ '/projects/airbike-quick-overview.html' | relative_url }})
 - [Read Full Project Report →]({{ '/projects/airbike.html' | relative_url }})
 
 ---
@@ -44,8 +46,8 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Overview:** School-wide competition between engineering dynamics classes in which student teams designed and constructed a trebuchet under a $500 budget constraint to launch a 10 lb pumpkin as far as possible.
 - **Methods:** Led the team through the design, drafting, fabrication, assembly, and testing process while working within competition time and budget constraints
 - **Tools:** Engineering Drawings, Fabrication, Team Leadership
+- [Read Quick Overview →]({{ '/projects/trebuchet-quick-overview.html' | relative_url }})
 - [Read Full Project Report →]({{ '/projects/trebuchet.html' | relative_url }})
-- **Project Documents:** [Initial Frame Drawing (PDF)]({{ '/assets/docs/trebuchet/trebuchet-initial-draft.pdf' | relative_url }}) • [Bill of Materials (XLSX)]({{ '/assets/docs/trebuchet/trebuchet-temp-bom.xlsx' | relative_url }})
 
 ---
 
@@ -158,7 +160,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Use microscopy and XRD to relate coating characteristics to observed corrosion and mechanical behavior
   - Collaborate with UARK on cytotoxicity and surface-wettability testing
 - **Tools:** Plasma Electrolytic Oxidation, Gamry Potentiostat, EIS/PDP, Optical Microscopy/SEM, XRD, Microhardness Testing
-- **Status:** Undergraduate Research — In Progress • [Research Plan (DOCX)]({{ '/assets/docs/research/peo-coating-research-plan.docx' | relative_url }})
+- **Status:** Undergraduate Research — In Progress
 
 ---
 
@@ -175,7 +177,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Evaluate in-vitro corrosion behavior using immersion testing, hydrogen evolution, PDP, and EIS
   - Collaborate with UARK on cytotoxicity, cell adhesion, wettability, and ion-release characterization
 - **Tools:** Resodyn Acoustic Mixer, Hot Compaction, Argon Sintering, SEM/EDS, XRD, Microhardness Testing, Electrochemical Characterization
-- **Status:** Undergraduate Research — In Progress • [Research Plan (DOCX)]({{ '/assets/docs/research/nanocomposite-research-plan-draft.docx' | relative_url }})
+- **Status:** Undergraduate Research — In Progress
 
 ---
 
