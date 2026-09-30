@@ -188,4 +188,4 @@ I built this portfolio to document that progression; Not only the projects I hav
 - **Simulation & FEA/CFD:** SolidWorks FEA, CFD, and Thermal Simulation, ANSYS, NASTRAN
 - **Programming & Analysis:** C++, MATLAB, Python, Proxmox
 - **Fabrication & Testing:** Plasma Electrolytic Oxidation (PEO), Electrochemical Corrosion Testing, Scanning electron microscopy (SEM)/Energy-Dispersive X-Ray Spectroscopy (EDS), X-Ray Diffraction Analysis (XRD), Potentiodynamic Polarization (PDP), Electrochemical Impedance Spectroscopy (EIS), Hall Flowmeter, Vickers Microhardness,
-- **Planned skills to learn in 2027:** SysML / IBM Rhapsody, Fortran, GIT, numerical methods, thermal modeling/analysis
+- **Planned skills to learn in 2027:** SysML / IBM Rhapsody, Fortran, GIT, numerical methods, thermal modeling/analysis, SiemensNX
