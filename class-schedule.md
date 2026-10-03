@@ -90,7 +90,7 @@ toc: true
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
   }
 
   .legend-card-header {
@@ -121,6 +121,62 @@ toc: true
     height: 10px;
     border-radius: 50%;
     flex-shrink: 0;
+  }
+
+  /* Institution Segmented Tabs */
+  .institution-tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    background: #141722;
+    border: 1px solid #262a38;
+    border-radius: 10px;
+    padding: 0.35rem;
+    margin: 1.75rem 0 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .inst-tab-btn {
+    flex: 1 1 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .inst-tab-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .inst-tab-btn.active {
+    background: #1e2433;
+    color: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+
+  .inst-tab-badge {
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .inst-tab-badge-ung {
+    background: #0ea5e9;
   }
 
   /* Badges */
@@ -164,6 +220,22 @@ toc: true
     font-weight: 700;
   }
 
+  .badge-grade-c {
+    background: rgba(251, 191, 36, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+  }
+
+  .badge-grade-k {
+    background: rgba(167, 139, 250, 0.18);
+    color: #c084fc;
+    border: 1px solid rgba(167, 139, 250, 0.4);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+  }
+
   .badge-track-aae {
     background: rgba(251, 191, 36, 0.12);
     color: #fbbf24;
@@ -201,46 +273,11 @@ toc: true
     font-family: 'JetBrains Mono', monospace;
   }
 
-  .course-block {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.1rem 1.25rem;
-    margin: 1rem 0;
-    transition: border-color 0.2s ease, transform 0.15s ease;
-  }
-
-  .course-block:hover {
-    border-color: #3b82f6;
-    transform: translateY(-2px);
-  }
-
   .course-badges-line {
     display: flex;
     gap: 0.45rem;
     flex-wrap: wrap;
     margin: 0.4rem 0 0.65rem 0;
-  }
-
-  .course-desc-p {
-    font-size: 0.92rem;
-    color: #cbd5e1;
-    line-height: 1.6;
-    margin: 0.5rem 0 0.75rem 0;
-  }
-
-  .course-link-p {
-    margin: 0.25rem 0 0 0;
-    font-size: 0.82rem;
-  }
-
-  .course-link-p a {
-    color: #60a5fa;
-    text-decoration: none;
-  }
-
-  .course-link-p a:hover {
-    text-decoration: underline;
   }
 </style>
 
@@ -254,9 +291,6 @@ toc: true
 <div class="nav-pills-bar">
   <a href="{{ '/' | relative_url }}" class="nav-pill-btn nav-pill-secondary">
     ← Back to Portfolio Home
-  </a>
-  <a href="{{ '/assets/docs/resume-lucas-lebron.pdf' | relative_url }}" class="nav-pill-btn nav-pill-primary">
-    View Resume (PDF)
   </a>
   <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="nav-pill-btn nav-pill-secondary">
     Official KSU Catalog ↗
@@ -273,19 +307,19 @@ toc: true
     <div class="stat-tile-label">Completed Major GPA</div>
   </div>
   <div class="stat-tile" style="border-top: 3px solid #3b82f6;">
-    <div class="stat-tile-val">40</div>
+    <div class="stat-tile-val">145</div>
     <div class="stat-tile-label">Credits Completed</div>
   </div>
   <div class="stat-tile" style="border-top: 3px solid #10b981;">
-    <div class="stat-tile-val">16</div>
-    <div class="stat-tile-label">Courses Completed (10 A's, 6 B's)</div>
+    <div class="stat-tile-val">53</div>
+    <div class="stat-tile-label">Courses Completed</div>
   </div>
   <div class="stat-tile" style="border-top: 3px solid #a855f7;">
     <div class="stat-tile-val">20</div>
     <div class="stat-tile-label">Planned / In Progress</div>
   </div>
   <div class="stat-tile" style="border-top: 3px solid #f59e0b;">
-    <div class="stat-tile-val">36</div>
+    <div class="stat-tile-val">73</div>
     <div class="stat-tile-label">Total Curriculum Courses</div>
   </div>
 </div>
@@ -320,9 +354,38 @@ toc: true
   </div>
 </div>
 
+<div class="institution-tabs-container">
+  <button class="inst-tab-btn active" id="btn-tab-ksu" onclick="switchInstitutionTab('ksu')">
+    <span class="inst-tab-badge">KSU</span>
+    <span>Kennesaw State University (2025–2027)</span>
+  </button>
+  <button class="inst-tab-btn" id="btn-tab-ung" onclick="switchInstitutionTab('ung')">
+    <span class="inst-tab-badge inst-tab-badge-ung">UNG</span>
+    <span>University of North Georgia & AP Transfer (2022–2025)</span>
+  </button>
+</div>
+
 ---
+<div id="pane-ksu" class="institution-pane">
+
+## Summer 2025
+<span class="badge badge-completed">Completed</span> • **3 Credit Hours • Term GPA: 4.00**
+
+### STAT 2332: Probability and Data Analysis
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">ME Credits / General Core</span>
+  <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
+</div>
+
+An introduction to probability, statistical methods, and data analysis techniques. Topics include descriptive statistics, probability theory, discrete and continuous random variables, sampling distributions, confidence intervals, hypothesis testing, linear regression, and ANOVA.
+
+[View in KSU Academic Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
 ## Fall 2025
-<span class="badge badge-completed">Completed</span> • **14 Credit Hours • Term GPA: 3.57**
+<span class="badge badge-completed">Completed</span> • **14 Credit Hours • Term GPA: 3.57 • Dean's List**
 
 ### AAE 1001L: Intro to Aerospace Engineering Laboratory
 <div class="course-badges-line">
@@ -403,7 +466,7 @@ Fundamentals of classical thermodynamics including the concept of energy and the
 ---
 
 ## Spring 2026
-<span class="badge badge-completed">Completed</span> • **16 Credit Hours • Term GPA: 3.44**
+<span class="badge badge-completed">Completed</span> • **16 Credit Hours • Term GPA: 3.43**
 
 ### AAE 3000: Introduction to Flight
 <div class="course-badges-line">
@@ -431,7 +494,7 @@ Fundamentals of aerodynamics and fluid flow around aerodynamic bodies. Topics in
 
 ---
 
-### ENGR 3343: Fluid Dynamics (Fluid Mechanics)
+### ME 3343: Fluid Dynamics (Fluid Mechanics)
 <div class="course-badges-line">
   <span class="badge badge-grade-a">Grade: A</span>
   <span class="badge badge-track-me">ME Credits</span>
@@ -451,7 +514,7 @@ A study of the fundamentals of fluid statics and dynamics, including hydrostatic
   <span class="badge badge-credits">1 Credit Hour (0 Class, 3 Lab)</span>
 </div>
 
-Laboratory reinforcing the principles of fluid mechanics studied in ENGR 3343, as they apply to hydraulic and pneumatic systems, flow rate metering, orifice discharge, friction head loss in pipes and fittings, and aerodynamic drag measurement. Emphasizes experimental reporting and error analysis.
+Laboratory reinforcing the principles of fluid mechanics studied in ME 3343, as they apply to hydraulic and pneumatic systems, flow rate metering, orifice discharge, friction head loss in pipes and fittings, and aerodynamic drag measurement. Emphasizes experimental reporting and error analysis.
 
 [View in KSU Academic Catalog ↗](https://catalog.kennesaw.edu/index.php)
 
@@ -484,7 +547,7 @@ Fundamentals of mechanical engineering design and component sizing under static 
 ---
 
 ## Summer 2026
-<span class="badge badge-completed">Completed</span> • **10 Credit Hours • Term GPA: 4.00**
+<span class="badge badge-completed">Completed</span> • **10 Credit Hours • Term GPA: 4.00 • President's List**
 
 ### ENGR 4402: Engineering Ethics
 <div class="course-badges-line">
@@ -543,7 +606,7 @@ Introduces the fundamentals and applications of major manufacturing processes an
 
 ### ENGR 3804: Intro to Aerospace Structural Analysis
 <div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-planned">In Progress</span>
   <span class="badge badge-track-aae">AAE Credits</span>
   <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
@@ -556,7 +619,7 @@ An introductory course for analyzing aircraft and aerospace structures that brid
 
 ### AAE 4802: Spacecraft Propulsion
 <div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-planned">In Progress</span>
   <span class="badge badge-track-aae">AAE Credits (Astronautics)</span>
   <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
@@ -569,7 +632,7 @@ Principles and engineering of propulsion systems used in spacecraft. Covers rock
 
 ### AAE 3125: Orbital Mechanics
 <div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-planned">In Progress</span>
   <span class="badge badge-track-aae">AAE Credits</span>
   <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
@@ -582,9 +645,9 @@ Study of the science of space travel and orbital motion. Covers the two-body orb
 
 ### AAE 3801L: Aerodynamics & UAS Lab
 <div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-planned">In Progress</span>
   <span class="badge badge-track-aae">AAE Credits</span>
-  <span class="badge badge-credits">3 Credit Hours (0 Class, 3 Lab)</span>
+  <span class="badge badge-credits">1 Credit Hour (0 Class, 3 Lab)</span>
 </div>
 
 Comprehensive hands-on laboratory in aerodynamics and unmanned aerial systems (UAS). Students utilize wind tunnels to evaluate surface pressure distributions across airfoils, determine lift and drag polars, observe boundary layer stall, calibrate aerodynamic balances, and design and flight-test unmanned aerial vehicles.
@@ -595,7 +658,7 @@ Comprehensive hands-on laboratory in aerodynamics and unmanned aerial systems (U
 
 ### MATH 3262: Mathematical Modeling
 <div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-planned">In Progress</span>
   <span class="badge badge-track-math">Math Minor</span>
   <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
@@ -688,7 +751,20 @@ Fundamentals of DC and AC circuits and electromechanical machinery for non-elect
 ---
 
 ## Summer 2027
-<span class="badge badge-planned">Plan to Take</span> • **6 Credit Hours • 2 Courses**
+<span class="badge badge-planned">Plan to Take</span> • **9 Credit Hours • 3 Courses**
+
+### AAE 4203: Spacecraft Design 1
+<div class="course-badges-line">
+  <span class="badge badge-planned">Planned</span>
+  <span class="badge badge-track-aae">AAE Credits (Astronautics)</span>
+  <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
+</div>
+
+First phase of the capstone senior design sequence for the Astronautics concentration in Aerospace Engineering. Covers space mission architecture, payload requirements, orbit selection, subsystem budgeting (mass, power, link margin), preliminary mechanical/thermal design, and Preliminary Design Review (PDR).
+
+[View in KSU Academic Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
 
 ### ME 3398 / 4400: Internship or Directed Study
 <div class="course-badges-line">
@@ -717,7 +793,7 @@ Provides tools necessary to examine social and public policy issues from an econ
 ---
 
 ## Fall 2027
-<span class="badge badge-planned">Plan to Take</span> • **14 Credit Hours • 6 Courses**
+<span class="badge badge-planned">Plan to Take</span> • **17 Credit Hours • Culminating Dual Degree Capstones**
 
 ### ME 4202: Senior Design 2
 <div class="course-badges-line">
@@ -732,14 +808,14 @@ Part 2 and culmination of the two-course senior capstone project for mechanical 
 
 ---
 
-### AAE 4203: Spacecraft Design 1
+### AAE 4204: Spacecraft Design 2
 <div class="course-badges-line">
   <span class="badge badge-planned">Planned</span>
   <span class="badge badge-track-aae">AAE Credits (Astronautics)</span>
   <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
 
-First phase of the capstone senior design sequence for the Astronautics concentration in Aerospace Engineering. Covers space mission architecture, payload requirements, orbit selection, subsystem budgeting (mass, power, link margin), preliminary mechanical/thermal design, and Preliminary Design Review (PDR).
+Final capstone design project in astronautical engineering. Teams complete the detailed design, subsystem simulation, hardware-software integration, and environmental testing (thermal-vacuum, vibration) for a full spacecraft mission, culminating in the Critical Design Review (CDR) and formal defense before faculty and industry evaluators.
 
 [View in KSU Academic Catalog ↗](https://catalog.kennesaw.edu/index.php)
 
@@ -797,19 +873,524 @@ Laboratory course focused on experimental spaceflight dynamics. Involves orbital
 
 ---
 
-## Spring 2028
-<span class="badge badge-planned">Plan to Take</span> • **3 Credit Hours • Culminating Capstone**
-
-### AAE 4204: Spacecraft Design 2
-<div class="course-badges-line">
-  <span class="badge badge-planned">Planned</span>
-  <span class="badge badge-track-aae">AAE Credits (Astronautics)</span>
-  <span class="badge badge-credits">3 Credit Hours (3 Class, 0 Lab)</span>
 </div>
 
-Final capstone design project in astronautical engineering. Teams complete the detailed design, subsystem simulation, hardware-software integration, and environmental testing (thermal-vacuum, vibration) for a full spacecraft mission, culminating in the Critical Design Review (CDR) and formal defense before faculty and industry evaluators.
+<div id="pane-ung" class="institution-pane" style="display: none;">
 
-[View in KSU Academic Catalog ↗](https://catalog.kennesaw.edu/index.php)
+## Fall 2022
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **20 Credit Hours • Term GPA: 3.20**
+
+### ECON 2105: Principles of Economics - Macro
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-core">Social Sciences Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Fundamental principles of macroeconomics. Analysis of national income determination, economic growth, unemployment, inflation, fiscal policy, monetary policy, the banking system, and international trade.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
 
 ---
 
+### ENGL 1102: Composition II
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">Communication Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+A composition course developing writing skills emphasizing interpretation, evaluation, analytical essays, critical thinking, research methods, and literature-based writing.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 1111: College Algebra
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-math">Mathematics Foundation</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Topics include functions and their graphs, linear and quadratic equations and inequalities, polynomials, rational functions, exponential and logarithmic functions, and systems of equations.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### ME 1311: MATLAB for Engineers with Applications
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-me">Engineering Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Introduction to programming and mathematical computing using MATLAB for engineering applications. Covers array operations, data visualization, conditional logic, loops, functions, linear algebra solvers, numerical methods, and technical modeling.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MUSI 1107: Arts in Society: Music
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Humanities Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+An introduction to music in cultural and historical contexts, covering elements of musical structure, major eras and styles, and aesthetic listening appreciation.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MUSI 1T00: Music Transfer Elective
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Transfer Elective</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Undergraduate music transfer elective credit accepted toward degree requirements.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### POLS 1101: American Government
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Institutional Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+An introductory study of the government and politics of the United States and the state of Georgia, covering the constitutional foundation, institutions, civil liberties, and political processes.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Spring 2023
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **19 Credit Hours • Term GPA: 3.21**
+
+### CHEM 1211: General Chemistry I
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">STEM Science Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+First course in a two-semester general chemistry sequence. Topics include atomic structure, chemical bonding, stoichiometry, periodic trends, gases, thermochemistry, and molecular geometry.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### CHEM 1211L: General Chemistry I Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">STEM Science Lab</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Laboratory course accompanying CHEM 1211 emphasizing experimental techniques, chemical synthesis, stoichiometric analysis, calorimetry, and safety.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### HIST 1111: Pre-Modern World History
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">World History Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Survey of world history from early human civilizations through the pre-modern era, examining cultural, political, economic, and technological interactions across global societies.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### JAPN 1001: Elementary Japanese I
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">Foreign Language Elective</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Introduction to Japanese language and culture. Focuses on speaking, listening, reading, and writing Japanese using Hiragana, Katakana, and basic Kanji.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 1113: Precalculus
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-math">Mathematics Foundation</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+In-depth study of algebraic, trigonometric, exponential, and logarithmic functions, analytic trigonometry, vectors, and preparatory concepts for calculus.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 1501: Calculus I (eCore)
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-math">Mathematics Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+First course in calculus. Topics include limits, continuity, differentiation of algebraic and transcendental functions, applications of derivatives (optimization, related rates), and introductory definite and indefinite integrals.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MUSI 1T01: Music Transfer Elective
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Transfer Elective</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Undergraduate transfer elective credit in music.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Summer 2023
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **4 Credit Hours • Term GPA: 3.00**
+
+### MATH 2202: Calculus II
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-math">Mathematics Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Techniques of integration, applications of definite integrals, improper integrals, sequences, infinite series, power series, Taylor series, and parametric and polar curves.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Fall 2023
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **6 Credit Hours • Term GPA: 2.50**
+
+### JAPN 2001: Intermediate Japanese I
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">Foreign Language Elective</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Intermediate Japanese focusing on expanding communicative proficiency, complex grammatical patterns, reading comprehension, and additional Kanji characters.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 2306: Ordinary Differential Equations
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-math">Mathematics Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Study of ordinary differential equations. Covers first-order ODEs, linear higher-order differential equations, Laplace transforms, series solutions, systems of linear differential equations, and applications to engineering and physical systems.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Spring 2024
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **14 Credit Hours • Term GPA: 3.50**
+
+### EDG 1211: Engineering Graphics I
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-me">Engineering Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Fundamentals of engineering graphics and computer-aided design (CAD). Orthographic projection, isometric views, sectioning, dimensioning, tolerances, and 3D parametric solid modeling.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### JAPN 1002: Elementary Japanese II
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Foreign Language Elective</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Continuation of Elementary Japanese I. Expands conversational skills, listening comprehension, grammatical structures, and Kanji literacy.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### JAPN 2002: Intermediate Japanese II
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">Foreign Language Elective</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Second course in intermediate Japanese. Refines conversational fluency, formal expressions, contextual discourse, and cultural understanding.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 2203: Calculus III
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-math">Mathematics Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Multivariable calculus. Vectors in three dimensions, vector-valued functions, functions of several variables, partial derivatives, directional derivatives, multiple integrals (Cartesian, cylindrical, spherical), vector calculus, Green's Theorem, Divergence Theorem, and Stokes' Theorem.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Summer 2024
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **4 Credit Hours • Term GPA: 3.25**
+
+### PHYS 2211: Principles of Physics I
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">STEM Physics Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Calculus-based physics covering classical mechanics, kinematics, Newton's laws of motion, work and energy, linear momentum, rotational dynamics, gravitation, and oscillations.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### PHYS 2211L: Principles of Physics Lab I
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">STEM Physics Lab</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Laboratory course reinforcing concepts of classical mechanics through experimental measurements, motion tracking, conservation laws verification, and data analysis.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Fall 2024
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **14 Credit Hours • Term GPA: 2.71**
+
+### CHEM 1212: General Chemistry II
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-core">STEM Science Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Second semester of general chemistry. Topics include intermolecular forces, solutions, chemical kinetics, chemical equilibrium, acid-base chemistry, thermodynamics (entropy and free energy), and electrochemistry.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### CHEM 1212L: General Chemistry II Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-core">STEM Science Lab</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Laboratory accompanying CHEM 1212 covering quantitative chemical kinetics, equilibrium constants, acid-base titrations, electrochemistry, and spectrophotometry.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### ENGR 2214: Engineering Mechanics - Statics
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-me">Engineering Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Study of force systems in equilibrium. Topics include vector representation of forces, moments, couples, equilibrium of particles and rigid bodies, analysis of trusses, frames, and machines, centroids, moments of inertia, and friction.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### MATH 3260: Linear Algebra
+<div class="course-badges-line">
+  <span class="badge badge-grade-b">Grade: B</span>
+  <span class="badge badge-track-math">Mathematics Core / Minor</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Systems of linear equations, matrices, determinants, vector spaces, subspaces, linear transformations, eigenvalues and eigenvectors, diagonalization, and inner product spaces.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### PHYS 2212: Calculus-based Physics II w/Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-core">STEM Physics Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Calculus-based physics covering electricity and magnetism. Electric charge, Coulomb's Law, electric fields, Gauss's Law, electric potential, capacitance, DC circuits, magnetic fields, Ampere's Law, and electromagnetic induction.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### PHYS 2212L: Calculus-based Physics II Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-c">Grade: C</span>
+  <span class="badge badge-track-core">STEM Physics Lab</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Laboratory experiments in electricity, magnetism, DC circuits, oscilloscope usage, and electromagnetic induction.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Spring 2025
+<span class="badge badge-completed">Transfer Credit Accepted</span> • **3 Credit Hours • Term GPA: 4.00**
+
+### ENGR 1000: Introduction to Engineering
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-me">Engineering Core</span>
+  <span class="badge badge-credits">2.0 Credit Hours</span>
+</div>
+
+Introduction to engineering disciplines, the engineering design process, professional ethics, problem-solving methodologies, and engineering team projects.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### ME 1001L: Intro to Mechanical Engr Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-a">Grade: A</span>
+  <span class="badge badge-track-me">Engineering Core</span>
+  <span class="badge badge-credits">1.0 Credit Hour</span>
+</div>
+
+Introductory laboratory in mechanical engineering covering basic manufacturing tools, mechanical prototyping, measurements, and engineering design challenges.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+## Spring 2022: Advanced Placement Credit
+<span class="badge badge-completed">AP Transfer Credit</span> • **18.0 Earned Credit Hours**
+
+### CHEM 1151 / 1151L: Survey of Chemistry I & Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-k">Grade: K (AP Credit)</span>
+  <span class="badge badge-track-core">STEM Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Advanced Placement examination credit accepted for Survey of Chemistry I lecture and laboratory.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### CHEM 1152 / 1152L: Survey of Chemistry II & Lab
+<div class="course-badges-line">
+  <span class="badge badge-grade-k">Grade: K (AP Credit)</span>
+  <span class="badge badge-track-core">STEM Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Advanced Placement examination credit accepted for Survey of Chemistry II lecture and laboratory.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### ENGL 1101: Composition I
+<div class="course-badges-line">
+  <span class="badge badge-grade-k">Grade: K (AP Credit)</span>
+  <span class="badge badge-track-core">Communication Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Advanced Placement examination credit accepted for English Composition I.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### HIST 2111: United States History to 1877
+<div class="course-badges-line">
+  <span class="badge badge-grade-k">Grade: K (AP Credit)</span>
+  <span class="badge badge-track-core">US History Core</span>
+  <span class="badge badge-credits">3.0 Credit Hours</span>
+</div>
+
+Advanced Placement examination credit accepted for United States History to 1877.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+### SCI 1101: Science, Society & Environment I
+<div class="course-badges-line">
+  <span class="badge badge-grade-k">Grade: K (AP Credit)</span>
+  <span class="badge badge-track-core">Science Core</span>
+  <span class="badge badge-credits">4.0 Credit Hours</span>
+</div>
+
+Advanced Placement examination credit accepted for Science, Society & Environment I.
+
+[View in University Course Catalog ↗](https://catalog.kennesaw.edu/index.php)
+
+---
+
+</div>
+
+<script>
+  function switchInstitutionTab(target) {
+    const ksuPane = document.getElementById('pane-ksu');
+    const ungPane = document.getElementById('pane-ung');
+    const ksuBtn = document.getElementById('btn-tab-ksu');
+    const ungBtn = document.getElementById('btn-tab-ung');
+
+    if (target === 'ksu') {
+      ksuPane.style.display = 'block';
+      ungPane.style.display = 'none';
+      ksuBtn.classList.add('active');
+      ungBtn.classList.remove('active');
+    } else {
+      ksuPane.style.display = 'none';
+      ungPane.style.display = 'block';
+      ungBtn.classList.add('active');
+      ksuBtn.classList.remove('active');
+    }
+  }
+</script>
