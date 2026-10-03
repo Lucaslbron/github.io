@@ -6,7 +6,7 @@ title: Home | Engineering Portfolio
 # Lucas Lebron
 **Aerospace & Mechanical Engineering**
 
-[LinkedIn](https://www.linkedin.com/in/lucaslebron/) • [GitHub](https://github.com/Lucaslbron) • [Email Me](mailto:lucaslbron@proton.me) • [Resume (PDF)]({{ '/assets/docs/resume-lucas-lebron.pdf' | relative_url }})
+[LinkedIn](https://www.linkedin.com/in/lucaslebron/) • [GitHub](https://github.com/Lucaslbron) • [Email Me](mailto:lucaslbron@proton.me) • [Resume (PDF)]({{ '/assets/docs/resume-lucas-lebron.pdf' | relative_url }}) • [Class Schedule]({{ '/class-schedule.html' | relative_url }})
 
 ---
 
