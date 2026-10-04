@@ -118,7 +118,21 @@ I built this portfolio to document that progression; Not only the projects I hav
 
 ---
 
-### 2. **Arknights Endfield Factory Optimization**
+### 2. **Rocket Nozzle Design & Analysis**
+- **Focus:** Nozzle Theory, Thermodynamics, Analytical Modeling
+- **Overview:** Develop a first-principles rocket nozzle analysis and sizing tool using compressible-flow and thermodynamic theory. The project will build upon my previous liquid rocket injector work and apply concepts and equations from Rocket Propulsion to a complete nozzle design and performance analysis.
+- **Planned Methods:**
+  - 1-D compressible-flow analysis
+  - Converging-diverging nozzle sizing
+  - Throat sizing and expansion-ratio parametric analysis
+  - Thrust and specific impulse prediction
+  - Numerical implementation and validation
+  - CAD/CFD comparison
+- **Expected Start Timeline:** January 2027
+
+---
+
+### 3. **Arknights Endfield Factory Optimization**
 - **Focus:** Linear Optimization, Mathematical Modeling, Coding Practice
 - **Overview:** Develop an optimization model for in-game factory production under resource, machine, and integer-production constraints. The project will investigate how linear/integer optimization can determine production configurations that maximize production efficiency and trade-offs under specified resource, power, and space constraints.
 - **Planned Methods:**
