@@ -82,7 +82,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Translate the optimized solution into a detailed SolidWorks model
   - Use subsequent FEA to validate the optimized design against the analytical model
 - **Tools:** Solidworks, Linear optimization
-- **Expected Completion Timeline:** Mid-October
+- **Expected Completion Timeline:** Late-October
 
 ---
 
