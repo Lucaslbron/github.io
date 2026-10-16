@@ -102,11 +102,9 @@ I built this portfolio to document that progression; Not only the projects I hav
 
 ---
 
-## Planned Engineering Projects
-
-### 1. **Satellite Tracker**
+### 4. **Satellite Tracker**
 - **Focus:** Orbital Mechanics, Mathematical Modeling, Differential Equations, Numerical Methods
-- **Overview:** Develop a MATLAB-based satellite tracking and orbital propagation program as part of a semester-long orbital mechanics project. The model will use differential equations and numerical integration to calculate and track the position and velocity of a theoretical satellite throughout its orbit. The project will investigate how different orbital parameters influence satellite trajectories and how numerical methods can be used to model spacecraft motion over time.
+- **Overview:** Developing a MATLAB-based satellite tracking and orbital propagation program as part of a semester-long orbital mechanics project. The model will use differential equations and numerical integration to calculate and track the position and velocity of a theoretical satellite throughout its orbit. The project will investigate how different orbital parameters influence satellite trajectories and how numerical methods can be used to model spacecraft motion over time.
 - **Planned Methods:**
   - Formulate the equations of motion governing two-body orbital dynamics
   - Use numerical integration to propagate satellite position and velocity over time
@@ -114,11 +112,10 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Investigate the effects of initial conditions and orbital parameters on the resulting trajectory
   - Compare numerical results with analytical orbital mechanics relationships where applicable
   - Implement the orbital propagation and visualization tools in MATLAB
-- **Expected Start Timeline:** Mid-Late October
+- **Expected Completion Timeline:** December 2026
+## Planned Engineering Projects
 
----
-
-### 2. **Rocket Nozzle Design & Analysis**
+### 1. **Rocket Nozzle Design & Analysis**
 - **Focus:** Nozzle Theory, Thermodynamics, Analytical Modeling
 - **Overview:** Develop a first-principles rocket nozzle analysis and sizing tool using compressible-flow and thermodynamic theory. The project will build upon my previous liquid rocket injector work and apply concepts and equations from Rocket Propulsion to a complete nozzle design and performance analysis.
 - **Planned Methods:**
@@ -132,9 +129,9 @@ I built this portfolio to document that progression; Not only the projects I hav
 
 ---
 
-### 3. **Arknights Endfield Factory Optimization**
+### 2. **Arknights Endfield Factory Optimization**
 - **Focus:** Linear Optimization, Mathematical Modeling, Coding Practice
-- **Overview:** Develop an optimization model for in-game factory production under resource, machine, and integer-production constraints. The project will investigate how linear/integer optimization can determine production configurations that maximize production efficiency and trade-offs under specified resource, power, and space constraints.
+- **Overview:** Develop an optimization model for in-game factory production under resource, machine, space, and integer-production constraints. The project will investigate how linear/integer optimization can determine production configurations that maximize production efficiency and trade-offs under specified resource, power, and space constraints.
 - **Planned Methods:**
   - Formulate production relationships as an optimization problem
   - Apply linear/integer optimization techniques
