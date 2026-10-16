@@ -66,7 +66,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Determine aerodynamic forces and lift from the resulting pressure distribution
   - Validate results against analytical solutions and established aerodynamic cases where applicable
 - **Tools:** C++, Linear Algebra, Git
-- **Expected Completion Timeline:** Late October - Early November 2026
+- **Expected Completion Timeline:** Late October - Early November
 
 ---
 
@@ -82,7 +82,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Translate the optimized solution into a detailed SolidWorks model
   - Use subsequent FEA to validate the optimized design against the analytical model
 - **Tools:** Solidworks, Linear optimization
-- **Expected Completion Timeline:** Late-October
+- **Expected Completion Timeline:** Late October
 
 ---
 
@@ -98,7 +98,7 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Validate simulation results against analytical and hand calculations
   - Quantify the effects of structural optimization on mass, structural performance, and aerodynamic performance
 - **Tools:** SolidWorks Simulation, SolidWorks Flow Simulation, ANSYS CFD, NASTRAN FEA, Hand Calculations
-- **Expected Completion Timeline:** Late November - Early December
+- **Expected Completion Timeline:** Late November - December
 
 ---
 
@@ -112,7 +112,11 @@ I built this portfolio to document that progression; Not only the projects I hav
   - Investigate the effects of initial conditions and orbital parameters on the resulting trajectory
   - Compare numerical results with analytical orbital mechanics relationships where applicable
   - Implement the orbital propagation and visualization tools in MATLAB
+- **Tools:** MATLAB, Numerical Methods, Differential Equations
 - **Expected Completion Timeline:** December 2026
+
+---
+
 ## Planned Engineering Projects
 
 ### 1. **Rocket Nozzle Design & Analysis**
