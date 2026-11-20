@@ -5,6 +5,39 @@ permalink: /projects/injector/
 toc: true
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+html, body { background-color: #FFFFFF; color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; }
+h1 { font-size: 2.15rem; font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: 1.45rem; border-bottom: 1.5px solid #18181B; padding-bottom: 0.45rem; margin-top: 2.3rem; }
+a { color: #09090B; text-decoration: underline; text-decoration-color: #FFCC00; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+a:hover { background-color: #FFCC00; color: #09090B; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #FFFFFF; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+th, td { padding: 0.65rem 0.95rem; text-align: left; border-bottom: 1px dashed #D4D4D8; }
+th { background: #F3F4F6; color: #09090B; font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1.5px solid #18181B; }
+tr:last-child td { border-bottom: none; }
+blockquote { background: #F3F4F6; border: 1.5px solid #18181B; border-left: 4px solid #FFCC00; border-radius: 3px; padding: 0.85rem 1.2rem; box-shadow: 3px 3px 0px #18181B; color: #09090B; }
+img { max-width: 100%; height: auto; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; background: #F3F4F6; display: block; margin: 1.25rem 0 0.5rem 0; }
+code { font-family: 'JetBrains Mono', monospace; background: #F3F4F6; color: #09090B; border: 1px solid #D4D4D8; padding: 0.15rem 0.35rem; border-radius: 2px; }
+pre { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; padding: 1.05rem; overflow-x: auto; }
+pre code { background: transparent; border: none; padding: 0; }
+.bp-action-bar { display: flex; gap: 0.65rem; flex-wrap: wrap; margin: 1.35rem 0; }
+a.bp-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.9rem; border-radius: 2px; border: 1.5px solid #18181B; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-decoration: none; }
+a.bp-btn-primary { background: #FFCC00; color: #09090B; font-weight: 700; }
+a.bp-btn-primary:hover { background: #E6B800; color: #09090B; }
+a.bp-btn-secondary { background: #FFFFFF; color: #09090B; font-weight: 600; }
+a.bp-btn-secondary:hover { background: #FFCC00; color: #09090B; }
+.bp-viewer-card { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; padding: 1.35rem; box-shadow: 4px 4px 0px #18181B; margin: 1.75rem 0; }
+.bp-viewer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem; }
+.bp-viewer-title { margin: 0; border: none; padding: 0; color: #09090B; font-size: 1.15rem; font-weight: 700; }
+.bp-viewer-viewport { width: 100%; height: 500px; background: radial-gradient(circle at center, #FFFFFF 0%, #E4E4E7 100%); border: 1.5px solid #18181B; border-radius: 2px; outline: none; }
+.bp-viewer-footer { margin-top: 0.9rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: #52525B; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+.bp-video-card { margin: 1.75rem 0; background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+.bp-video-player { width: 100%; display: block; background: #FFFFFF; }
+.bp-video-caption { padding: 0.8rem 1.1rem; font-size: 0.88rem; color: #52525B; background: #FFFFFF; border-top: 1.5px solid #18181B; }
+</style>
+
 # Impinging Injector for a 250 lbf Liquid Rocket Engine
 
 **Kennesaw State University Liquid Propulsion Team**  
@@ -199,34 +232,35 @@ The analytical dimensions established the starting point, but the injector requi
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
-<div id="cad-viewer" style="margin: 1.75rem 0; background: #181926; border-radius: 12px; padding: 1.25rem; border: 1px solid #2e3048; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h4 style="margin: 0; color: #f8fafc; font-size: 1.05rem;">
-      Interactive 3D CAD Assembly Viewer
-    </h4>
-    <a href="{{ '/projects/injector-cad-viewer.html' | relative_url }}" style="color: #60a5fa; text-decoration: none; font-size: 0.85rem; font-weight: 500;">
-      Open Fullpage 3D Viewer ↗
-    </a>
+<div id="cad-viewer" class="bp-viewer-card">
+  <div class="bp-viewer-header">
+  <h4 class="bp-viewer-title">
+  Interactive 3D CAD Assembly Viewer
+  </h4>
+  <a href="{{ '/projects/injector-cad-viewer.html' | relative_url }}" class="bp-btn bp-btn-primary">
+  Open Fullpage 3D Viewer ↗
+  </a>
   </div>
   <model-viewer
-    src="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}"
-    poster="{{ '/assets/images/injector/injector-viewport.png' | relative_url }}"
-    alt="3D CAD Assembly of Impinging Injector"
-    auto-rotate
-    rotation-per-second="25deg"
-    camera-controls
-    touch-action="pan-y"
-    shadow-intensity="1.5"
-    exposure="1.15"
-    camera-orbit="45deg 55deg 105%"
-    style="width: 100%; height: 480px; background: radial-gradient(circle at center, #25283b 0%, #11121a 100%); border-radius: 8px; outline: none;">
-    <div slot="progress-bar" style="height: 4px; background: #3b82f6;"></div>
+  class="bp-viewer-viewport"
+  src="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}"
+  poster="{{ '/assets/images/injector/injector-viewport.png' | relative_url }}"
+  alt="3D CAD Assembly of Impinging Injector"
+  auto-rotate
+  rotation-per-second="25deg"
+  camera-controls
+  touch-action="pan-y"
+  shadow-intensity="1.5"
+  exposure="1.15"
+  camera-orbit="45deg 55deg 105%"
+  style="height: 480px;">
+  <div slot="progress-bar" style="height: 4px; background: #FFCC00;"></div>
   </model-viewer>
-  <div style="margin-top: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: #94a3b8;">
-    <span>🖱️ <strong>Interactive:</strong> Click + drag to orbit • Scroll to zoom • Two-finger drag to pan</span>
-    <a href="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}" download style="color: #60a5fa; text-decoration: none;">
-      ⬇ Download .GLB (300 KB)
-    </a>
+  <div class="bp-viewer-footer">
+  <span>🖱️ <strong>Interactive:</strong> Click + drag to orbit • Scroll to zoom • Two-finger drag to pan</span>
+  <a href="{{ '/assets/models/injector/injector-assembly.glb' | relative_url }}" download class="bp-btn bp-btn-secondary">
+  ⬇ Download .GLB (300 KB)
+  </a>
   </div>
 </div>
 

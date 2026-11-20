@@ -5,6 +5,39 @@ permalink: /projects/trebuchet.html
 toc: true
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+html, body { background-color: #FFFFFF; color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; }
+h1 { font-size: 2.15rem; font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: 1.45rem; border-bottom: 1.5px solid #18181B; padding-bottom: 0.45rem; margin-top: 2.3rem; }
+a { color: #09090B; text-decoration: underline; text-decoration-color: #FFCC00; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+a:hover { background-color: #FFCC00; color: #09090B; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #FFFFFF; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+th, td { padding: 0.65rem 0.95rem; text-align: left; border-bottom: 1px dashed #D4D4D8; }
+th { background: #F3F4F6; color: #09090B; font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1.5px solid #18181B; }
+tr:last-child td { border-bottom: none; }
+blockquote { background: #F3F4F6; border: 1.5px solid #18181B; border-left: 4px solid #FFCC00; border-radius: 3px; padding: 0.85rem 1.2rem; box-shadow: 3px 3px 0px #18181B; color: #09090B; }
+img { max-width: 100%; height: auto; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; background: #F3F4F6; display: block; margin: 1.25rem 0 0.5rem 0; }
+code { font-family: 'JetBrains Mono', monospace; background: #F3F4F6; color: #09090B; border: 1px solid #D4D4D8; padding: 0.15rem 0.35rem; border-radius: 2px; }
+pre { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; padding: 1.05rem; overflow-x: auto; }
+pre code { background: transparent; border: none; padding: 0; }
+.bp-action-bar { display: flex; gap: 0.65rem; flex-wrap: wrap; margin: 1.35rem 0; }
+a.bp-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.9rem; border-radius: 2px; border: 1.5px solid #18181B; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-decoration: none; }
+a.bp-btn-primary { background: #FFCC00; color: #09090B; font-weight: 700; }
+a.bp-btn-primary:hover { background: #E6B800; color: #09090B; }
+a.bp-btn-secondary { background: #FFFFFF; color: #09090B; font-weight: 600; }
+a.bp-btn-secondary:hover { background: #FFCC00; color: #09090B; }
+.bp-viewer-card { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; padding: 1.35rem; box-shadow: 4px 4px 0px #18181B; margin: 1.75rem 0; }
+.bp-viewer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem; }
+.bp-viewer-title { margin: 0; border: none; padding: 0; color: #09090B; font-size: 1.15rem; font-weight: 700; }
+.bp-viewer-viewport { width: 100%; height: 500px; background: radial-gradient(circle at center, #FFFFFF 0%, #E4E4E7 100%); border: 1.5px solid #18181B; border-radius: 2px; outline: none; }
+.bp-viewer-footer { margin-top: 0.9rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: #52525B; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+.bp-video-card { margin: 1.75rem 0; background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+.bp-video-player { width: 100%; display: block; background: #FFFFFF; }
+.bp-video-caption { padding: 0.8rem 1.1rem; font-size: 0.88rem; color: #52525B; background: #FFFFFF; border-top: 1.5px solid #18181B; }
+</style>
+
 # Floating-Arm Trebuchet
 
 **Design, Fabrication, and Competition Testing of a Full-Scale Mechanical Launching System**  
@@ -12,7 +45,7 @@ toc: true
 **Role:** Team Captain, Structural Layout, Fastener Planning, Fabrication & Field Testing  
 **Team Size:** 10 Engineering Students • **Budget Constraint:** $500 • **Timeline:** ~1 Month  
 
-![Floating-Arm Trebuchet Competition Hero]({{ '/assets/images/trebuchet/trebuchet-competition-hero.png' | relative_url }})
+![Floating-Arm Trebuchet Competition Hero](../assets/images/trebuchet/trebuchet-competition-hero.png)
 
 *Full-scale floating-arm trebuchet fielded during the university engineering dynamics competition, showing the vertical guide tracks, drop-channel axle, and team loading the 10 lb pumpkin payload into the sling pouch.*
 
@@ -64,7 +97,7 @@ Early in the conceptual design phase, the team evaluated two competing mechanica
 
 The trebuchet's half-frame structural layout was developed around standard dimensional lumber sizes, establishing structural dimensions that balanced stability against overturning moments with vertical drop height.
 
-![Floating Arm Trebuchet Frame Working Drawing]({{ '/assets/images/trebuchet/trebuchet-frame-drawing.png' | relative_url }})
+![Floating Arm Trebuchet Frame Working Drawing](../assets/images/trebuchet/trebuchet-frame-drawing.png)
 
 *Working drawing showing frame geometry, structural dimensions, and handwritten fastener-layout calculations used during fabrication planning.*
 
@@ -104,7 +137,7 @@ To prevent budget overruns, a detailed Bill of Materials was established before 
 
 The procurement plan successfully capped total planned expenditures at **$462.14**, leaving a **$37.86 safety buffer** for incidental replacement hardware, drill bits, and field adjustments.
 
-- **[Download Complete Bill of Materials (BOM) Spreadsheet (XLSX)]({{ '/assets/docs/trebuchet/trebuchet-temp-bom.xlsx' | relative_url }})**
+- **[Download Complete Bill of Materials (BOM) Spreadsheet (XLSX)](../assets/docs/trebuchet/trebuchet-temp-bom.xlsx)**
 
 ---
 
@@ -114,7 +147,7 @@ The procurement plan successfully capped total planned expenditures at **$462.14
 
 With raw materials delivered to the staging dock, fabrication commenced immediately. The team converted the 2D frame drawing into physical subassemblies, beginning with the construction of the structural half-frames.
 
-![Trebuchet Half-Frame Assembly on Staging Ground]({{ '/assets/images/trebuchet/trebuchet-frame-fabrication.png' | relative_url }})
+![Trebuchet Half-Frame Assembly on Staging Ground](../assets/images/trebuchet/trebuchet-frame-fabrication.png)
 
 *Half-frame subassembly laid out on the staging ground, showing cut dimensional lumber, 30° mitered diagonal braces, and central guide track alignment.*
 
@@ -140,11 +173,11 @@ Fabricating a large dynamic mechanism from dimensional lumber revealed several h
 
 The fully assembled trebuchet was transported to the university athletic fields for competition staging and final operational checks.
 
-![Final Floating Arm Trebuchet Machine at Competition]({{ '/assets/images/trebuchet/trebuchet-competition-hero.png' | relative_url }})
+![Final Floating Arm Trebuchet Machine at Competition](../assets/images/trebuchet/trebuchet-competition-hero.png)
 
 *Complete floating-arm trebuchet assembled on the competition field. The vertical mast, red diagonal supports, counterweight barbell axle, and sling assembly establish scale relative to the 10-student team.*
 
-![Trebuchet Competition Staging and Field Operations]({{ '/assets/images/trebuchet/trebuchet-competition-field.png' | relative_url }})
+![Trebuchet Competition Staging and Field Operations](../assets/images/trebuchet/trebuchet-competition-field.png)
 
 *Competition staging area showing field tools, rigging hardware, and neighboring student team trebuchet entries.*
 
@@ -216,13 +249,13 @@ The project required a 10-person team to move from an initial concept to a compe
 
 The original working drawings and budgetary documentation are available below:
 
-- **[Initial Frame Drafting Package (PDF)]({{ '/assets/docs/trebuchet/trebuchet-initial-draft.pdf' | relative_url }})**  
+- **[Initial Frame Drafting Package (PDF)](../assets/docs/trebuchet/trebuchet-initial-draft.pdf)**  
   *Original 1:10 scale working drawing documenting the 90" × 45.5" half-frame dimensions, 30° bracing, and handwritten fastener-layout calculations.*
-- **[Bill of Materials (BOM) Spreadsheet (XLSX)]({{ '/assets/docs/trebuchet/trebuchet-temp-bom.xlsx' | relative_url }})**  
+- **[Bill of Materials (BOM) Spreadsheet (XLSX)](../assets/docs/trebuchet/trebuchet-temp-bom.xlsx)**  
   *Detailed cost tracking sheet detailing lumber quantities, fasteners, axle hardware, and budget allocations under the $500 limit.*
-- **[Trebuchet Quick Overview Page]({{ '/projects/trebuchet-quick-overview.html' | relative_url }})**  
+- **[Trebuchet Quick Overview Page](trebuchet-quick-overview.html)**  
   *Concise 2-minute project summary tailored for rapid portfolio review.*
 
 ---
 
-[← Back to Portfolio Home]({{ '/' | relative_url }})
+[← Back to Portfolio Home](../)

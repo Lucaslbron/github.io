@@ -6,341 +6,445 @@ toc: true
 ---
 
 <style>
-  .schedule-intro-meta {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-  .nav-pills-bar {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin: 1.25rem 0 2rem 0;
-  }
+html, body {
+  background-color: #FFFFFF;
+  color: #09090B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .nav-pill-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 0.9rem;
-    border-radius: 6px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
+h1, h2, h3, h4 {
+  color: #09090B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+}
 
-  .nav-pill-primary {
-    background: #3b82f6;
-    color: #ffffff !important;
-  }
-  .nav-pill-primary:hover {
-    background: #2563eb;
-  }
+.bp-schedule-h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  color: #09090B;
+  margin: 0 0 0.6rem 0;
+}
 
-  .nav-pill-secondary {
-    background: #1c202c;
-    color: var(--text-muted) !important;
-    border: 1px solid #2d3345;
-  }
-  .nav-pill-secondary:hover {
-    color: #ffffff !important;
-    border-color: #3b82f6;
-  }
+.bp-schedule-h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #52525B;
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
 
-  /* Summary Stats */
-  .stats-summary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0 2rem 0;
-  }
+.bp-schedule-hr {
+  border: 0;
+  border-top: 1.5px solid #18181B;
+  margin: 1.75rem 0;
+}
 
-  .stat-tile {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.1rem 1rem;
-    position: relative;
-    overflow: hidden;
-  }
+.schedule-intro-meta {
+  font-size: 1rem;
+  color: #52525B;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
 
-  .stat-tile-val {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1.1;
-    margin-bottom: 0.35rem;
-    font-family: 'JetBrains Mono', monospace;
-  }
+.schedule-intro-meta strong {
+  color: #09090B;
+}
 
-  .stat-tile-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-  }
+.nav-pills-bar {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 2rem 0;
+}
 
-  /* Flowchart Legend */
-  .legend-card {
-    background: rgba(22, 25, 34, 0.6);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.25rem;
-    margin-bottom: 1.75rem;
-  }
+.nav-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+  border: 1.5px solid #18181B;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
 
-  .legend-card-header {
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-    margin-bottom: 0.85rem;
-  }
+.nav-pill-primary {
+  background: #FFCC00;
+  color: #09090B;
+  font-weight: 700;
+}
 
-  .legend-card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem 1.2rem;
-  }
+.nav-pill-primary:hover {
+  background: #E6B800;
+  color: #09090B;
+  text-decoration: none;
+}
 
-  .legend-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-size: 0.82rem;
-    color: var(--text-main);
-  }
+.nav-pill-secondary {
+  background: #FFFFFF;
+  color: #09090B;
+}
 
-  .legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+.nav-pill-secondary:hover {
+  background: #FFCC00;
+  color: #09090B;
+  text-decoration: none;
+}
 
-  /* Institution Segmented Tabs */
-  .institution-tabs-container {
-    display: flex;
-    gap: 0.5rem;
-    background: #141722;
-    border: 1px solid #262a38;
-    border-radius: 10px;
-    padding: 0.35rem;
-    margin: 1.75rem 0 2rem 0;
-    flex-wrap: wrap;
-  }
+.stats-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem 0;
+}
 
-  .inst-tab-btn {
-    flex: 1 1 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.65rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--text-muted);
-    font-family: inherit;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+.stat-tile {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-top: 4px solid #18181B;
+  border-radius: 3px;
+  padding: 1.1rem 1rem;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  .inst-tab-btn:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.04);
-  }
+.stat-tile--accent {
+  border-top-color: #FFCC00;
+}
 
-  .inst-tab-btn.active {
-    background: #1e2433;
-    color: #ffffff;
-    border-color: #3b82f6;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  }
+.stat-tile-val {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #09090B;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  .inst-tab-badge {
-    background: #3b82f6;
-    color: #ffffff;
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.15rem 0.45rem;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-  }
+.stat-tile-label {
+  font-size: 0.72rem;
+  color: #52525B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  .inst-tab-badge-ung {
-    background: #0ea5e9;
-  }
+.legend-card {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-left: 4px solid #FFCC00;
+  border-radius: 3px;
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  /* Badges */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    letter-spacing: 0.02em;
-    vertical-align: middle;
-  }
+.legend-card-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #09090B;
+  margin-bottom: 0.85rem;
+}
 
-  .badge-completed {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.35);
-  }
+.legend-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+}
 
-  .badge-planned {
-    background: rgba(168, 85, 247, 0.15);
-    color: #d8b4fe;
-    border: 1px solid rgba(168, 85, 247, 0.35);
-  }
+.legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #09090B;
+}
 
-  .badge-grade-a {
-    background: rgba(16, 185, 129, 0.18);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-  }
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid #18181B;
+  flex-shrink: 0;
+}
 
-  .badge-grade-b {
-    background: rgba(56, 189, 248, 0.18);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.4);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-  }
+.bp-inst-tabs-shell {
+  position: relative;
+}
 
-  .badge-grade-c {
-    background: rgba(251, 191, 36, 0.18);
-    color: #fbbf24;
-    border: 1px solid rgba(251, 191, 36, 0.4);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-  }
+.bp-inst-radio {
+  display: none;
+}
 
-  .badge-grade-k {
-    background: rgba(167, 139, 250, 0.18);
-    color: #c084fc;
-    border: 1px solid rgba(167, 139, 250, 0.4);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-  }
+.institution-tabs-container {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  gap: 0.45rem;
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-radius: 3px;
+  padding: 0.35rem;
+  margin: 1.75rem 0 2rem 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  .badge-track-aae {
-    background: rgba(251, 191, 36, 0.12);
-    color: #fbbf24;
-    border: 1px solid rgba(251, 191, 36, 0.3);
-  }
+.institution-tabs-container::-webkit-scrollbar {
+  display: none;
+}
 
-  .badge-track-me {
-    background: rgba(56, 189, 248, 0.12);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-  }
+.inst-tab-btn {
+  flex: 1 1 auto;
+  min-width: max-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.72rem 1.15rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #52525B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
 
-  .badge-track-me-elective {
-    background: rgba(45, 212, 191, 0.12);
-    color: #2dd4bf;
-    border: 1px solid rgba(45, 212, 191, 0.3);
-  }
+.inst-tab-btn:hover {
+  color: #09090B;
+  background: #FFFFFF;
+  border-color: #D4D4D8;
+}
 
-  .badge-track-math {
-    background: rgba(167, 139, 250, 0.12);
-    color: #c084fc;
-    border: 1px solid rgba(167, 139, 250, 0.3);
-  }
+#bp-inst-ksu:checked ~ .institution-tabs-container label[for="bp-inst-ksu"],
+#bp-inst-ung:checked ~ .institution-tabs-container label[for="bp-inst-ung"] {
+  background: #FFCC00;
+  color: #09090B;
+  border-color: #18181B;
+  font-weight: 700;
+}
 
-  .badge-track-core {
-    background: rgba(74, 222, 128, 0.12);
-    color: #4ade80;
-    border: 1px solid rgba(74, 222, 128, 0.3);
-  }
+#bp-inst-ksu:checked ~ .institution-tabs-container label[for="bp-inst-ksu"]:hover,
+#bp-inst-ung:checked ~ .institution-tabs-container label[for="bp-inst-ung"]:hover {
+  background: #E6B800;
+  color: #09090B;
+}
 
-  .badge-credits {
-    background: rgba(148, 163, 184, 0.12);
-    color: #cbd5e1;
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    font-family: 'JetBrains Mono', monospace;
-  }
+.inst-tab-badge {
+  background: rgba(24, 24, 27, 0.08);
+  color: #52525B;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
 
-  .course-badges-line {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-    margin: 0.25rem 0 0.45rem 0;
-  }
+#bp-inst-ksu:checked ~ .institution-tabs-container label[for="bp-inst-ksu"] .inst-tab-badge,
+#bp-inst-ung:checked ~ .institution-tabs-container label[for="bp-inst-ung"] .inst-tab-badge {
+  background: #09090B;
+  color: #FFCC00;
+}
 
-  /* Compact Semester Header Bar */
-  .semester-header-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    flex-wrap: wrap;
-    margin: 2.25rem 0 0.85rem 0;
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid var(--border-color);
-  }
+.institution-pane {
+  display: none;
+}
 
-  .semester-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    border: none;
-    line-height: 1.2;
-  }
+#bp-inst-ksu:checked ~ #pane-ksu,
+#bp-inst-ung:checked ~ #pane-ung {
+  display: block;
+  animation: fadeIn 0.22s ease-out forwards;
+}
 
-  .semester-meta-inline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-size: 0.92rem;
-    color: var(--text-muted);
-    flex-wrap: wrap;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  /* Compact Course Layout */
-  .course-block {
-    margin: 0 0 1.25rem 0;
-  }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.18rem 0.52rem;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  border: 1px solid #18181B;
+  background: #FFFFFF;
+  color: #09090B;
+}
 
-  .course-heading {
-    font-size: 1.08rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 0.65rem 0 0.25rem 0;
-    line-height: 1.3;
-  }
+.badge-completed {
+  background: #DCFCE7;
+  color: #14532D;
+  border-color: #15803D;
+}
 
-  .course-desc {
-    color: var(--text-main);
-    font-size: 0.94rem;
-    line-height: 1.55;
-    margin: 0.3rem 0 0.5rem 0;
-  }
+.badge-planned {
+  background: #FFCC00;
+  color: #09090B;
+  border-color: #18181B;
+}
 
-  .institution-pane {
-    animation: fadeIn 0.2s ease-in-out;
-  }
+.badge-grade-a {
+  background: #DCFCE7;
+  color: #14532D;
+  border-color: #15803D;
+}
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+.badge-grade-b {
+  background: #E0F2FE;
+  color: #0C4A6E;
+  border-color: #0369A1;
+}
+
+.badge-grade-c {
+  background: #FEF3C7;
+  color: #78350F;
+  border-color: #B45309;
+}
+
+.badge-grade-k {
+  background: #F3E8FF;
+  color: #581C87;
+  border-color: #7E22CE;
+}
+
+.badge-track-aae {
+  background: #FEF3C7;
+  color: #78350F;
+  border-color: #B45309;
+}
+
+.badge-track-me {
+  background: #FFFFFF;
+  color: #09090B;
+  border-color: #18181B;
+}
+
+.badge-track-me-elective {
+  background: #CCFBF1;
+  color: #134E4A;
+  border-color: #0F766E;
+}
+
+.badge-track-math {
+  background: #F3E8FF;
+  color: #581C87;
+  border-color: #7E22CE;
+}
+
+.badge-track-core {
+  background: #DCFCE7;
+  color: #14532D;
+  border-color: #15803D;
+}
+
+.badge-credits {
+  background: #FFFFFF;
+  color: #52525B;
+  border-color: #D4D4D8;
+}
+
+.course-badges-line {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0.3rem 0 0.5rem 0;
+}
+
+.semester-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin: 2.25rem 0 1rem 0;
+  padding-bottom: 0.55rem;
+  border-bottom: 1.5px solid #18181B;
+}
+
+.semester-heading {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #09090B;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1.2;
+}
+
+.semester-meta-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: #52525B;
+  flex-wrap: wrap;
+}
+
+.semester-meta-inline strong {
+  color: #09090B;
+}
+
+.course-block {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-radius: 3px;
+  padding: 1.05rem 1.25rem;
+  margin: 0 0 1rem 0;
+  box-shadow: 3px 3px 0px #18181B;
+}
+
+.course-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #09090B;
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  border: none;
+  line-height: 1.3;
+}
+
+.course-desc {
+  color: #52525B;
+  font-size: 0.93rem;
+  line-height: 1.58;
+  margin: 0.45rem 0 0 0;
+}
 </style>
 
-<h1 style="font-size: 2.1rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 0.5rem;">Academic Class Schedule & Degree Progress</h1>
+<h1 class="bp-schedule-h1">Academic Class Schedule & Degree Progress</h1>
 
 <div class="schedule-intro-meta">
   <strong>Lucas Lebron</strong> • Dual Degree: <strong>B.S. Aerospace Engineering (Astronautics Concentration)</strong> & <strong>B.S. Mechanical Engineering</strong> • Minor in <strong>Mathematics</strong><br>
@@ -348,83 +452,84 @@ toc: true
 </div>
 
 <div class="nav-pills-bar">
-  <a href="{{ '/' | relative_url }}" class="nav-pill-btn nav-pill-secondary">
-    ← Back to Portfolio Home
+  <a href="./" class="nav-pill-btn nav-pill-primary">
+  ← Back to Portfolio Home
   </a>
   <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="nav-pill-btn nav-pill-secondary">
-    Official KSU Catalog ↗
+  Official KSU Catalog ↗
   </a>
 </div>
 
-<hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.75rem 0;">
+<hr class="bp-schedule-hr">
 
-<h2 id="degree-progress-overview" style="font-size: 1.45rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">Degree Progress Overview</h2>
+<h2 id="degree-progress-overview" class="bp-schedule-h2">// Degree Progress Overview</h2>
 
 <div class="stats-summary-grid">
-  <div class="stat-tile" style="border-top: 3px solid #10b981;">
-    <div class="stat-tile-val">3.65</div>
-    <div class="stat-tile-label">Completed Major GPA</div>
+  <div class="stat-tile stat-tile--accent">
+  <div class="stat-tile-val">3.65</div>
+  <div class="stat-tile-label">Completed Major GPA</div>
   </div>
-  <div class="stat-tile" style="border-top: 3px solid #3b82f6;">
-    <div class="stat-tile-val">145</div>
-    <div class="stat-tile-label">Credits Completed</div>
+  <div class="stat-tile">
+  <div class="stat-tile-val">145</div>
+  <div class="stat-tile-label">Credits Completed</div>
   </div>
-  <div class="stat-tile" style="border-top: 3px solid #10b981;">
-    <div class="stat-tile-val">53</div>
-    <div class="stat-tile-label">Courses Completed</div>
+  <div class="stat-tile stat-tile--accent">
+  <div class="stat-tile-val">53</div>
+  <div class="stat-tile-label">Courses Completed</div>
   </div>
-  <div class="stat-tile" style="border-top: 3px solid #a855f7;">
-    <div class="stat-tile-val">20</div>
-    <div class="stat-tile-label">Planned / In Progress</div>
+  <div class="stat-tile">
+  <div class="stat-tile-val">20</div>
+  <div class="stat-tile-label">Planned / In Progress</div>
   </div>
-  <div class="stat-tile" style="border-top: 3px solid #f59e0b;">
-    <div class="stat-tile-val">73</div>
-    <div class="stat-tile-label">Total Curriculum Courses</div>
+  <div class="stat-tile stat-tile--accent">
+  <div class="stat-tile-val">73</div>
+  <div class="stat-tile-label">Total Curriculum Courses</div>
   </div>
 </div>
-
 <div class="legend-card">
   <div class="legend-card-header">Curriculum Classification & Legend (2025–2026 Flowcharts)</div>
   <div class="legend-card-grid">
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #fbbf24;"></span>
+      <span class="legend-dot" style="background: #B45309;"></span>
       <span><strong>AAE Credits:</strong> Aerospace Engineering Major Core</span>
     </div>
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #38bdf8;"></span>
+      <span class="legend-dot" style="background: #18181B;"></span>
       <span><strong>ME Credits:</strong> Mechanical Engineering Major Core</span>
     </div>
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #2dd4bf;"></span>
+      <span class="legend-dot" style="background: #0F766E;"></span>
       <span><strong>ME Technical Elective:</strong> Upper-division ME Specialization</span>
     </div>
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #fb923c;"></span>
+      <span class="legend-dot" style="background: #D97706;"></span>
       <span><strong>AAE Technical Elective:</strong> Upper-division AAE Specialization</span>
     </div>
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #c084fc;"></span>
+      <span class="legend-dot" style="background: #7E22CE;"></span>
       <span><strong>Math Minor:</strong> Advanced Mathematics Elective</span>
     </div>
     <div class="legend-pill">
-      <span class="legend-dot" style="background: #4ade80;"></span>
+      <span class="legend-dot" style="background: #15803D;"></span>
       <span><strong>Core IMPACTS:</strong> Institutional Social & Economic Core</span>
     </div>
   </div>
 </div>
 
-<div class="institution-tabs-container">
-  <button class="inst-tab-btn active" id="btn-tab-ksu" onclick="switchInstitutionTab('ksu')">
-    <span class="inst-tab-badge">KSU</span>
-    <span>Kennesaw State University (2025–2027)</span>
-  </button>
-  <button class="inst-tab-btn" id="btn-tab-ung" onclick="switchInstitutionTab('ung')">
-    <span class="inst-tab-badge inst-tab-badge-ung">UNG</span>
-    <span>University of North Georgia & AP Transfer (2022–2025)</span>
-  </button>
-</div>
+<div class="bp-inst-tabs-shell">
+  <input type="radio" class="bp-inst-radio" name="bp-inst-tab" id="bp-inst-ksu" value="ksu" checked>
+  <input type="radio" class="bp-inst-radio" name="bp-inst-tab" id="bp-inst-ung" value="ung">
 
-<hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.75rem 0 2rem 0;">
+  <div class="institution-tabs-container" role="tablist" aria-label="Academic Institution">
+  <label class="inst-tab-btn" id="btn-tab-ksu" for="bp-inst-ksu" role="tab" aria-selected="true" aria-controls="pane-ksu" data-inst="ksu" tabindex="0">
+  <span class="inst-tab-badge">KSU</span>
+  <span>Kennesaw State University (2025–2027)</span>
+  </label>
+  <label class="inst-tab-btn" id="btn-tab-ung" for="bp-inst-ung" role="tab" aria-selected="false" aria-controls="pane-ung" data-inst="ung" tabindex="-1">
+  <span class="inst-tab-badge">UNG</span>
+  <span>University of North Georgia & AP Transfer (2022–2025)</span>
+  </label>
+  </div>
 <div id="pane-ksu" class="institution-pane">
 
 <div class="semester-header-bar">
@@ -855,7 +960,7 @@ toc: true
 
 </div>
 
-<div id="pane-ung" class="institution-pane" style="display: none;">
+<div id="pane-ung" class="institution-pane">
 
 <div class="semester-header-bar">
   <h2 id="ung-fall-2022" class="semester-heading">Fall 2022</h2>
@@ -1282,50 +1387,77 @@ toc: true
 
 </div>
 
+</div>
+
 <script>
-function switchInstitutionTab(target) {
+(function () {
+  function syncScheduleTOC(target) {
   var ksuPane = document.getElementById('pane-ksu');
   var ungPane = document.getElementById('pane-ung');
-  var ksuBtn = document.getElementById('btn-tab-ksu');
-  var ungBtn = document.getElementById('btn-tab-ung');
-
-  if (!ksuPane || !ungPane || !ksuBtn || !ungBtn) return;
-
-  if (target === 'ksu') {
-    ksuPane.style.display = 'block';
-    ungPane.style.display = 'none';
-    ksuBtn.classList.add('active');
-    ungBtn.classList.remove('active');
-  } else {
-    ksuPane.style.display = 'none';
-    ungPane.style.display = 'block';
-    ungBtn.classList.add('active');
-    ksuBtn.classList.remove('active');
+  var ksuLbl = document.getElementById('btn-tab-ksu');
+  var ungLbl = document.getElementById('btn-tab-ung');
+  var ksuRadio = document.getElementById('bp-inst-ksu');
+  var ungRadio = document.getElementById('bp-inst-ung');
+  if (!ksuPane || !ungPane || !ksuLbl || !ungLbl) return;
+  if (ksuRadio && ungRadio) {
+  ksuRadio.checked = (target === 'ksu');
+  ungRadio.checked = (target === 'ung');
   }
-
+  ksuLbl.setAttribute('aria-selected', target === 'ksu' ? 'true' : 'false');
+  ksuLbl.setAttribute('tabindex', target === 'ksu' ? '0' : '-1');
+  ungLbl.setAttribute('aria-selected', target === 'ung' ? 'true' : 'false');
+  ungLbl.setAttribute('tabindex', target === 'ung' ? '0' : '-1');
   var tocNav = document.getElementById('toc-nav');
   if (tocNav) {
-    var activePane = (target === 'ksu') ? ksuPane : ungPane;
-    var links = tocNav.querySelectorAll('.toc-link');
-    links.forEach(function(link) {
-      var id = link.getAttribute('data-target');
-      if (id) {
-        var el = document.getElementById(id);
-        if (el) {
-          if (id === 'degree-progress-overview' || activePane.contains(el)) {
-            link.style.display = '';
-          } else {
-            link.style.display = 'none';
-          }
-        }
-      }
-    });
+  var activePane = (target === 'ksu') ? ksuPane : ungPane;
+  var links = tocNav.querySelectorAll('.toc-link');
+  links.forEach(function (link) {
+  var id = link.getAttribute('data-target');
+  if (id) {
+  var el = document.getElementById(id);
+  if (el) {
+  if (id === 'degree-progress-overview' || activePane.contains(el)) {
+  link.style.display = '';
+  } else {
+  link.style.display = 'none';
   }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    switchInstitutionTab('ksu');
+  }
+  }
+  });
+  }
+  }
+  function initScheduleTabs() {
+  var radios = Array.prototype.slice.call(document.querySelectorAll('.bp-inst-radio'));
+  var labels = Array.prototype.slice.call(document.querySelectorAll('.inst-tab-btn[data-inst]'));
+  radios.forEach(function (radio) {
+  radio.addEventListener('change', function () {
+  if (radio.checked) {
+  syncScheduleTOC(radio.value);
+  }
+  });
+  });
+  labels.forEach(function (lbl, index) {
+  lbl.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+  event.preventDefault();
+  var nextLbl = labels[(index + 1) % labels.length];
+  nextLbl.focus();
+  syncScheduleTOC(nextLbl.getAttribute('data-inst'));
+  } else if (event.key === 'Enter' || event.key === ' ') {
+  event.preventDefault();
+  syncScheduleTOC(lbl.getAttribute('data-inst'));
+  }
+  });
+  });
+  setTimeout(function () {
+  var activeRadio = document.querySelector('.bp-inst-radio:checked');
+  syncScheduleTOC(activeRadio ? activeRadio.value : 'ksu');
   }, 120);
-});
+  }
+  if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScheduleTabs);
+  } else {
+  initScheduleTabs();
+  }
+})();
 </script>

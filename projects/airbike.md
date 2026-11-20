@@ -5,6 +5,39 @@ permalink: /projects/airbike.html
 toc: true
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+html, body { background-color: #FFFFFF; color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; }
+h1 { font-size: 2.15rem; font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: 1.45rem; border-bottom: 1.5px solid #18181B; padding-bottom: 0.45rem; margin-top: 2.3rem; }
+a { color: #09090B; text-decoration: underline; text-decoration-color: #FFCC00; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+a:hover { background-color: #FFCC00; color: #09090B; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #FFFFFF; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+th, td { padding: 0.65rem 0.95rem; text-align: left; border-bottom: 1px dashed #D4D4D8; }
+th { background: #F3F4F6; color: #09090B; font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1.5px solid #18181B; }
+tr:last-child td { border-bottom: none; }
+blockquote { background: #F3F4F6; border: 1.5px solid #18181B; border-left: 4px solid #FFCC00; border-radius: 3px; padding: 0.85rem 1.2rem; box-shadow: 3px 3px 0px #18181B; color: #09090B; }
+img { max-width: 100%; height: auto; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; background: #F3F4F6; display: block; margin: 1.25rem 0 0.5rem 0; }
+code { font-family: 'JetBrains Mono', monospace; background: #F3F4F6; color: #09090B; border: 1px solid #D4D4D8; padding: 0.15rem 0.35rem; border-radius: 2px; }
+pre { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; padding: 1.05rem; overflow-x: auto; }
+pre code { background: transparent; border: none; padding: 0; }
+.bp-action-bar { display: flex; gap: 0.65rem; flex-wrap: wrap; margin: 1.35rem 0; }
+a.bp-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.9rem; border-radius: 2px; border: 1.5px solid #18181B; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-decoration: none; }
+a.bp-btn-primary { background: #FFCC00; color: #09090B; font-weight: 700; }
+a.bp-btn-primary:hover { background: #E6B800; color: #09090B; }
+a.bp-btn-secondary { background: #FFFFFF; color: #09090B; font-weight: 600; }
+a.bp-btn-secondary:hover { background: #FFCC00; color: #09090B; }
+.bp-viewer-card { background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; padding: 1.35rem; box-shadow: 4px 4px 0px #18181B; margin: 1.75rem 0; }
+.bp-viewer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem; }
+.bp-viewer-title { margin: 0; border: none; padding: 0; color: #09090B; font-size: 1.15rem; font-weight: 700; }
+.bp-viewer-viewport { width: 100%; height: 500px; background: radial-gradient(circle at center, #FFFFFF 0%, #E4E4E7 100%); border: 1.5px solid #18181B; border-radius: 2px; outline: none; }
+.bp-viewer-footer { margin-top: 0.9rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: #52525B; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+.bp-video-card { margin: 1.75rem 0; background: #F3F4F6; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+.bp-video-player { width: 100%; display: block; background: #FFFFFF; }
+.bp-video-caption { padding: 0.8rem 1.1rem; font-size: 0.88rem; color: #52525B; background: #FFFFFF; border-top: 1.5px solid #18181B; }
+</style>
+
 # Electric Airbike Structural, Aerodynamic, & Thermal Simulations
 
 **Simulation-Driven Vehicle Engineering & Multiphysics Optimization**  
@@ -12,40 +45,41 @@ toc: true
 **Role:** Full-Vehicle CAD Integration, Structural FEA (Linear Static & Nonlinear Dynamics), Rotating-Region Aerodynamic CFD, Conjugate Heat Transfer (CHT), and Fatigue Analysis  
 **Tools:** SolidWorks 3D CAD, SolidWorks Simulation (Static FEA, Nonlinear Dynamics, Fatigue Studies), SolidWorks Flow Simulation (External Aerodynamics, Rotating Regions, Multi-Species Heat Transfer)
 
-![Electric Airbike Full Vehicle CAD Assembly]({{ '/assets/images/airbike/airbike-assembly-hero.png' | relative_url }})
+![Electric Airbike Full Vehicle CAD Assembly](../assets/images/airbike/airbike-assembly-hero.png)
 
 *Final Electric Airbike assembly modeled in SolidWorks, showing the tubular aluminum chassis, operator ergonomics, mid-mounted battery pack and heat exchanger, fixed swept wings, and rear ducted propeller propulsion system.*
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
-<div id="cad-viewer" style="margin: 1.75rem 0; background: #181926; border-radius: 12px; padding: 1.25rem; border: 1px solid #2e3048; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h4 style="margin: 0; color: #f8fafc; font-size: 1.05rem;">
-      Interactive 3D CAD Assembly Viewer
-    </h4>
-    <a href="{{ '/projects/airbike-cad-viewer.html' | relative_url }}" style="color: #60a5fa; text-decoration: none; font-size: 0.85rem; font-weight: 500;">
-      Open Fullpage 3D Viewer ↗
-    </a>
+<div id="cad-viewer" class="bp-viewer-card">
+  <div class="bp-viewer-header">
+  <h4 class="bp-viewer-title">
+  Interactive 3D CAD Assembly Viewer
+  </h4>
+  <a href="airbike-cad-viewer.html" class="bp-btn bp-btn-primary">
+  Open Fullpage 3D Viewer ↗
+  </a>
   </div>
   <model-viewer
-    src="{{ '/assets/models/airbike/airbike-assembly.glb' | relative_url }}"
-    poster="{{ '/assets/images/airbike/airbike-assembly-hero.png' | relative_url }}"
-    alt="3D CAD Assembly of Electric Airbike"
-    auto-rotate
-    rotation-per-second="20deg"
-    camera-controls
-    touch-action="pan-y"
-    shadow-intensity="1.5"
-    exposure="1.15"
-    camera-orbit="45deg 60deg 110%"
-    style="width: 100%; height: 500px; background: radial-gradient(circle at center, #25283b 0%, #11121a 100%); border-radius: 8px; outline: none;">
-    <div slot="progress-bar" style="height: 4px; background: #3b82f6;"></div>
+  class="bp-viewer-viewport"
+  src="../assets/models/airbike/airbike-assembly.glb"
+  poster="../assets/images/airbike/airbike-assembly-hero.png"
+  alt="3D CAD Assembly of Electric Airbike"
+  auto-rotate
+  rotation-per-second="20deg"
+  camera-controls
+  touch-action="pan-y"
+  shadow-intensity="1.5"
+  exposure="1.15"
+  camera-orbit="45deg 60deg 110%"
+  style="height: 500px;">
+  <div slot="progress-bar" style="height: 4px; background: #FFCC00;"></div>
   </model-viewer>
-  <div style="margin-top: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: #94a3b8;">
-    <span>🖱️ <strong>Interactive:</strong> Click + drag to orbit • Scroll to zoom • Two-finger drag to pan</span>
-    <a href="{{ '/assets/models/airbike/airbike-assembly.glb' | relative_url }}" download style="color: #60a5fa; text-decoration: none;">
-      ⬇ Download .GLB (53 MB)
-    </a>
+  <div class="bp-viewer-footer">
+  <span>🖱️ <strong>Interactive:</strong> Click + drag to orbit • Scroll to zoom • Two-finger drag to pan</span>
+  <a href="../assets/models/airbike/airbike-assembly.glb" download class="bp-btn bp-btn-secondary">
+  ⬇ Download .GLB (53 MB)
+  </a>
   </div>
 </div>
 
@@ -89,11 +123,11 @@ The development began with strict physical interface constraints. The positions 
 3. **Rear Wheel Clearance:** Establishing adequate clearance around the rear tire profile and wheel mounting brackets to prevent contact under dynamic suspension travel.
 4. **Structural Load Transfer:** Transmitting propulsion thrust from the high-mounted ducted fan through the chassis to the wheels and wing root interfaces.
 
-![Chassis Initial Packaging and Operator Placement]({{ '/assets/images/airbike/chassis-initial-packaging.png' | relative_url }})
+![Chassis Initial Packaging and Operator Placement](../assets/images/airbike/chassis-initial-packaging.png)
 
 *Initial packaging study establishing the structural frame geometry around the fixed wheel centers, steering axis, seated 200 lbf operator, and rear motor position.*
 
-![Rear Wheel Mount and Clearance]({{ '/assets/images/airbike/chassis-rear-mount-clearance.png' | relative_url }})
+![Rear Wheel Mount and Clearance](../assets/images/airbike/chassis-rear-mount-clearance.png)
 
 *Detail view of the rear wheel mount and lower tubular rail interface, demonstrating tire clearance and mounting bracket integration.*
 
@@ -111,15 +145,15 @@ The initial chassis geometry utilized Aluminum 6061-T6 round tubing (2.50" OD ×
 
 Fixtures were applied at the front steering tube and rear axle mounts. When loaded with the 200 lbf operator and 400 lbf rear propulsion assembly, FEA revealed severe structural under-design:
 
-![Chassis V1 von Mises Stress]({{ '/assets/images/airbike/chassis-v1-stress-fea.png' | relative_url }})
+![Chassis V1 von Mises Stress](../assets/images/airbike/chassis-v1-stress-fea.png)
 
 *Chassis V1 von Mises stress distribution. Peak stress of $5.233 \times 10^4\text{ psi}$ (52,330 psi) far exceeded the material yield strength ($3.989 \times 10^4\text{ psi}$), indicated by the red yield threshold arrow.*
 
-![Chassis V1 Deflection]({{ '/assets/images/airbike/chassis-v1-deflection-fea.png' | relative_url }})
+![Chassis V1 Deflection](../assets/images/airbike/chassis-v1-deflection-fea.png)
 
 *Chassis V1 deflection contour showing a catastrophic maximum elastic deflection of 5.512 inches at the unsupported rear propulsion mount.*
 
-![Chassis V1 Factor of Safety]({{ '/assets/images/airbike/chassis-v1-fos-fea.png' | relative_url }})
+![Chassis V1 Factor of Safety](../assets/images/airbike/chassis-v1-fos-fea.png)
 
 *Chassis V1 Factor of Safety (FOS) plot. The minimum FOS dropped to **0.76**, indicating immediate plastic deformation and structural failure under nominal static load.*
 
@@ -131,15 +165,15 @@ To resolve the severe bending deflection and yield failure, the chassis geometry
 
 The re-meshed and re-evaluated assembly produced dramatic structural improvements:
 
-![Chassis V2 von Mises Stress]({{ '/assets/images/airbike/chassis-v2-stress-fea.png' | relative_url }})
+![Chassis V2 von Mises Stress](../assets/images/airbike/chassis-v2-stress-fea.png)
 
 *Chassis V2 von Mises stress distribution with rear truss bracing. Maximum stress dropped to $2.786 \times 10^3\text{ psi}$ (2,786 psi), representing an order-of-magnitude reduction well below material yield.*
 
-![Chassis V2 Deflection]({{ '/assets/images/airbike/chassis-v2-deflection-fea.png' | relative_url }})
+![Chassis V2 Deflection](../assets/images/airbike/chassis-v2-deflection-fea.png)
 
 *Chassis V2 deflection contour demonstrating a maximum displacement of only 0.03444 inches (0.87 mm), restoring total frame rigidity.*
 
-![Chassis V2 Factor of Safety]({{ '/assets/images/airbike/chassis-v2-fos-fea.png' | relative_url }})
+![Chassis V2 Factor of Safety](../assets/images/airbike/chassis-v2-fos-fea.png)
 
 *Chassis V2 Factor of Safety plot. The minimum FOS rose to **14.32**, confirming full structural integrity with substantial safety margins.*
 
@@ -168,7 +202,7 @@ The operator seat was designed as a lightweight sheet metal structure tailored t
 - **Pan Dimensions:** $12\text{ in}$ width $\times 12\text{ in}$ seat depth $\times 16\text{ in}$ backrest height
 - **Chassis Clearance:** $3.25\text{ in}$ nominal spacing from the chassis upper tube, leaving a $2.25\text{ in}$ gap between mounting flanges to accommodate a $1.0\text{ in}$ ergonomic shock-absorbing cushion.
 
-![Sheet Metal Seat Design Model]({{ '/assets/images/airbike/seat-sheet-metal-design.png' | relative_url }})
+![Sheet Metal Seat Design Model](../assets/images/airbike/seat-sheet-metal-design.png)
 
 *SolidWorks sheet metal model of the operator seat, featuring formed bends, side mounting flanges, and weight-relief cutouts.*
 
@@ -189,7 +223,7 @@ Rather than assuming a static load, a **nonlinear time-dependent simulation** wa
   F_{\text{backrest}}(t) = 25t \quad [\text{lbf}] \quad \longrightarrow \quad F_{\text{backrest}}(2) = 50\text{ lbf}
   $$
 
-![Nonlinear Seat FEA Stress Distribution]({{ '/assets/images/airbike/seat-nonlinear-stress-fea.png' | relative_url }})
+![Nonlinear Seat FEA Stress Distribution](../assets/images/airbike/seat-nonlinear-stress-fea.png)
 
 *Nonlinear nodal stress results at $t = 2.0\text{ s}$ (Time Step 100). Maximum von Mises stress reached $3.934 \times 10^4\text{ psi}$ (39,340 psi) at the lower formed mounting bend.*
 
@@ -209,7 +243,7 @@ While an FOS of **1.862** demonstrates static compliance without yield, the nonl
 
 To decouple operator inertia from high-frequency road vibrations and frame flex, an integrated leaf-spring suspension bracket was developed to sit between the chassis upper rail and the seat frame.
 
-![Seat Suspension Assembly Integration]({{ '/assets/images/airbike/seat-suspension-assembly-integration.png' | relative_url }})
+![Seat Suspension Assembly Integration](../assets/images/airbike/seat-suspension-assembly-integration.png)
 
 *Integrated seat suspension bracket (RevP2) mounted directly between the chassis tube and the sheet metal seat pan beneath the operator.*
 
@@ -223,11 +257,11 @@ The suspension bracket was manufactured from Aluminum 7075-T6.
 
 Loading conditions simulated a simultaneous worst-case dynamic event: $200\text{ lbf}$ vertical seat load combined with a $25\text{ lbf}$ rearward inertial backrest load.
 
-![Seat Suspension V2 von Mises Stress]({{ '/assets/images/airbike/seat-suspension-v2-stress-fea.png' | relative_url }})
+![Seat Suspension V2 von Mises Stress](../assets/images/airbike/seat-suspension-v2-stress-fea.png)
 
 *Seat Suspension RevP2 static nodal stress contour. Peak stress dropped to $1.788 \times 10^4\text{ psi}$ (17,880 psi), well below the 73,240 psi yield limit.*
 
-![Seat Suspension V2 Displacement]({{ '/assets/images/airbike/seat-suspension-v2-displacement-fea.png' | relative_url }})
+![Seat Suspension V2 Displacement](../assets/images/airbike/seat-suspension-v2-displacement-fea.png)
 
 *Seat Suspension RevP2 displacement contour showing a maximum deflection of 0.400 inches under full combined operator load.*
 
@@ -258,7 +292,7 @@ A thermal study was conducted to evaluate whether passive air convection and ext
 - **Heat Generation:** $0.30\text{ W}$ per cell ($60\text{ W}$ total pack heat generation, equivalent to an aggressive volumetric thermal input of $44\text{ BTU/s}$ applied across the cell array bodies).
 - **Convective Boundary Condition:** Free air convection across external aluminum enclosure surfaces with heat transfer coefficient $h = 10\text{ W/m}^2\cdot\text{K}$ ($3.4 \times 10^{-6}\text{ BTU/(s}\cdot\text{in}^2\cdot{}^\circ\text{F)}$).
 
-![Battery Pack Thermal Runaway FEA]({{ '/assets/images/airbike/battery-pack-thermal-runaway-fea.png' | relative_url }})
+![Battery Pack Thermal Runaway FEA](../assets/images/airbike/battery-pack-thermal-runaway-fea.png)
 
 *Thermal simulation contour of the 10×20 battery array enclosure under passive convective boundary conditions, showing internal heat stagnation and extreme temperature accumulation.*
 
@@ -282,21 +316,21 @@ A custom fixed wing was engineered from scratch to provide aerodynamic lift at c
 - **Flight Velocities:** Simulated at preliminary cruise ($55\text{ mph}$ / $80.7\text{ ft/s}$) and high-speed cruise ($75\text{ mph}$ / $110.0\text{ ft/s}$).
 - **Flow Physics:** Navier-Stokes formulation with $k$-$\epsilon$ turbulence modeling, resolving boundary layer development and pressure distribution.
 
-![Wing Flow Simulation Velocity Cut Plot]({{ '/assets/images/airbike/wing-cfd-velocity-cut-plot.png' | relative_url }})
+![Wing Flow Simulation Velocity Cut Plot](../assets/images/airbike/wing-cfd-velocity-cut-plot.png)
 
 *Velocity cut plot across the wing chord at 55 mph. Air accelerates over the upper suction surface to a maximum velocity of 96.67 mph, creating the required low-pressure lift field, while wake velocity drops to 17.78 mph.*
 
-![Wing Surface Pressure Distribution]({{ '/assets/images/airbike/wing-cfd-surface-pressure.png' | relative_url }})
+![Wing Surface Pressure Distribution](../assets/images/airbike/wing-cfd-surface-pressure.png)
 
 *Distributed normal aerodynamic force contour across the wing surface. Upper surface distributed suction reaches $-14.61\text{ lbf/in}^2$, producing net positive lift.*
 
-<div style="margin: 1.75rem 0; border-radius: 12px; overflow: hidden; background: #181926; border: 1px solid #2e3048; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-  <video autoplay loop muted playsinline controls style="width: 100%; display: block; border-radius: 12px 12px 0 0; background: #11121a;">
-    <source src="{{ '/assets/videos/airbike/wing-particle-study.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
+<div class="bp-video-card">
+  <video autoplay loop muted playsinline controls class="bp-video-player">
+  <source src="../assets/videos/airbike/wing-particle-study.mp4" type="video/mp4">
+  Your browser does not support the video tag.
   </video>
-  <div style="padding: 0.85rem 1.15rem; font-size: 0.88rem; color: #94a3b8; background: #13141f; border-top: 1px solid #23263a;">
-    <em>Transient aerodynamic particle study tracking flow streamlines, velocity acceleration, and circulation over the fixed-wing airfoil upper suction camber.</em>
+  <div class="bp-video-caption">
+  <em>Transient aerodynamic particle study tracking flow streamlines, velocity acceleration, and circulation over the fixed-wing airfoil upper suction camber.</em>
   </div>
 </div>
 
@@ -308,7 +342,7 @@ The pressure and shear stress fields computed in the flow simulation were export
 
 The wing root was fixed at the chassis mounting boss. An initial material study evaluated lightweight **balsa wood core construction**:
 
-![Wing Structural FEA Stress Distribution]({{ '/assets/images/airbike/wing-structural-stress-fea.png' | relative_url }})
+![Wing Structural FEA Stress Distribution](../assets/images/airbike/wing-structural-stress-fea.png)
 
 *Static nodal stress distribution in the wing under 55 mph aerodynamic flight loads. Maximum stress reached 4,795 psi at the wing root/tip junction, exceeding balsa wood yield strength (2,901 psi).*
 
@@ -335,21 +369,21 @@ Forward propulsion is generated by a rear-mounted ducted fan comprising a multi-
 - **Flight Condition:** $75\text{ mph}$ vehicle forward velocity.
 - **Goals:** Real-time monitoring of thrust force ($\text{GG Normal Force } Y$), aerodynamic torque, total pressure, and wake velocity.
 
-![Propeller Rotating Region Trajectories]({{ '/assets/images/airbike/propeller-rotating-region-trajectories.png' | relative_url }})
+![Propeller Rotating Region Trajectories](../assets/images/airbike/propeller-rotating-region-trajectories.png)
 
 *Velocity flow trajectories through the rotating ducted propeller domain at $t = 5.0\text{ s}$, illustrating blade tip vortex development, wake expansion, and acceleration through the shroud.*
 
-![Propeller Thrust Goal Plot]({{ '/assets/images/airbike/propeller-thrust-goal-convergence.png' | relative_url }})
+![Propeller Thrust Goal Plot](../assets/images/airbike/propeller-thrust-goal-convergence.png)
 
 *SolidWorks Flow Simulation Goal Plot showing mathematical convergence of propeller thrust, total pressure, and velocity over solver iterations.*
 
-<div style="margin: 1.75rem 0; border-radius: 12px; overflow: hidden; background: #181926; border: 1px solid #2e3048; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-  <video autoplay loop muted playsinline controls style="width: 100%; display: block; border-radius: 12px 12px 0 0; background: #11121a;">
-    <source src="{{ '/assets/videos/airbike/propeller-particle-study.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
+<div class="bp-video-card">
+  <video autoplay loop muted playsinline controls class="bp-video-player">
+  <source src="../assets/videos/airbike/propeller-particle-study.mp4" type="video/mp4">
+  Your browser does not support the video tag.
   </video>
-  <div style="padding: 0.85rem 1.15rem; font-size: 0.88rem; color: #94a3b8; background: #13141f; border-top: 1px solid #23263a;">
-    <em>Rotating-region flow simulation and particle study tracking air acceleration, blade swirl vortices, and thrust wake propagation through the ducted shroud.</em>
+  <div class="bp-video-caption">
+  <em>Rotating-region flow simulation and particle study tracking air acceleration, blade swirl vortices, and thrust wake propagation through the ducted shroud.</em>
   </div>
 </div>
 
@@ -389,7 +423,7 @@ $$
 
 To resolve the thermal runaway risk identified in the battery pack, a multi-pass **conjugate heat transfer (CHT) liquid heat exchanger** was developed.
 
-![Heat Exchanger Serpentine Tubing CAD Model]({{ '/assets/images/airbike/heat-exchanger-cad-configuration.png' | relative_url }})
+![Heat Exchanger Serpentine Tubing CAD Model](../assets/images/airbike/heat-exchanger-cad-configuration.png)
 
 *CAD geometry of the multi-pass serpentine heat exchanger, showing intertwined dual-fluid flow circuits embedded within the aluminum heat-sink body.*
 
@@ -421,15 +455,15 @@ For an internal pipe diameter $D = 0.75\text{ in}$ ($A = 0.4418\text{ in}^2 = 0.
 
 The conjugate heat transfer simulation solved simultaneous conduction in the aluminum housing and convection/advection in both fluid streams:
 
-![Heat Exchanger Surface Temperature Contour]({{ '/assets/images/airbike/heat-exchanger-surface-temperature.png' | relative_url }})
+![Heat Exchanger Surface Temperature Contour](../assets/images/airbike/heat-exchanger-surface-temperature.png)
 
 *Surface temperature plot of the heat exchanger assembly. The hot dielectric oil enters at 200°F (red) and transfers heat into the counter-flowing R-134a circuit.*
 
-![Heat Exchanger Fluid Flow Trajectories]({{ '/assets/images/airbike/heat-exchanger-flow-trajectories.png' | relative_url }})
+![Heat Exchanger Fluid Flow Trajectories](../assets/images/airbike/heat-exchanger-flow-trajectories.png)
 
 *Fluid flow trajectories through the dual serpentine circuits showing thermal gradients from the 200°F oil inlet to the chilled refrigerant stream.*
 
-![Heat Exchanger Goal Convergence Plot]({{ '/assets/images/airbike/heat-exchanger-goal-convergence.png' | relative_url }})
+![Heat Exchanger Goal Convergence Plot](../assets/images/airbike/heat-exchanger-goal-convergence.png)
 
 *Heat exchanger goal convergence table, validating numerical stabilization of fluid temperatures and velocities across 138 iterations.*
 
@@ -562,12 +596,12 @@ A competent simulation engineer must know when **not** to trust a software resul
 
 The following documents contain the complete technical record, slide presentations, and detailed engineering data for this project:
 
-- **[Electric Airbike CAD Model Assembly (Interactive 3D Viewer)]({{ '/projects/airbike-cad-viewer.html' | relative_url }})** • [Direct 3D Model (.GLB)]({{ '/assets/models/airbike/airbike-assembly.glb' | relative_url }})
-- **[Electric Airbike Full Technical Presentation (PPTX)]({{ '/assets/docs/airbike/electric-airbike-final-presentation.pptx' | relative_url }})**  
+- **[Electric Airbike CAD Model Assembly (Interactive 3D Viewer)](airbike-cad-viewer.html)** • [Direct 3D Model (.GLB)](../assets/models/airbike/airbike-assembly.glb)
+- **[Electric Airbike Full Technical Presentation (PPTX)](../assets/docs/airbike/electric-airbike-final-presentation.pptx)**  
   *Complete 136-slide comprehensive deck containing all setup screens, boundary conditions, mesh parameters, animations, and intermediate FEA/CFD result plots.*
-- **[Electric Airbike Quick Overview Page]({{ '/projects/airbike-quick-overview.html' | relative_url }})**  
+- **[Electric Airbike Quick Overview Page](airbike-quick-overview.html)**  
   *Condensed high-level project summary for recruiters and quick reviews.*
 
 ---
 
-[← Back to Portfolio Home]({{ '/' | relative_url }})
+[← Back to Portfolio Home](../)

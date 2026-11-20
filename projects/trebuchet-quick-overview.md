@@ -4,6 +4,28 @@ title: Floating Arm Trebuchet Quick Overview | Engineering Dynamics
 permalink: /projects/trebuchet-quick-overview.html
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+html, body { background-color: #FFFFFF; color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { color: #09090B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; }
+h1 { font-size: 2.15rem; font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: 1.4rem; border-bottom: 1.5px solid #18181B; padding-bottom: 0.4rem; margin-top: 2.2rem; }
+a { color: #09090B; text-decoration: underline; text-decoration-color: #FFCC00; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+a:hover { background-color: #FFCC00; color: #09090B; }
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #FFFFFF; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; }
+th, td { padding: 0.65rem 0.95rem; text-align: left; border-bottom: 1px dashed #D4D4D8; }
+th { background: #F3F4F6; color: #09090B; font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1.5px solid #18181B; }
+tr:last-child td { border-bottom: none; }
+blockquote { background: #F3F4F6; border: 1.5px solid #18181B; border-left: 4px solid #FFCC00; border-radius: 3px; padding: 0.85rem 1.2rem; box-shadow: 3px 3px 0px #18181B; color: #09090B; }
+img { max-width: 100%; height: auto; border: 1.5px solid #18181B; border-radius: 3px; box-shadow: 4px 4px 0px #18181B; background: #F3F4F6; display: block; margin: 1.25rem 0 0.5rem 0; }
+.bp-action-bar { display: flex; gap: 0.65rem; flex-wrap: wrap; margin: 1.35rem 0; }
+a.bp-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.9rem; border-radius: 2px; border: 1.5px solid #18181B; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-decoration: none; }
+a.bp-btn-primary { background: #FFCC00; color: #09090B; font-weight: 700; }
+a.bp-btn-primary:hover { background: #E6B800; color: #09090B; }
+a.bp-btn-secondary { background: #FFFFFF; color: #09090B; font-weight: 600; }
+a.bp-btn-secondary:hover { background: #FFCC00; color: #09090B; }
+</style>
+
 # Floating Arm Trebuchet — Quick Overview
 
 **Engineering Dynamics Competition | Team Captain**  
@@ -11,12 +33,12 @@ permalink: /projects/trebuchet-quick-overview.html
 **Role:** Team Captain, Structural Layout, Fastener Planning, Fabrication & Testing  
 **Read Time:** ~2 minutes
 
-<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.25rem 0;">
-  <a href="{{ '/projects/trebuchet.html' | relative_url }}" style="background: #3b82f6; color: #ffffff; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
-    Read Full Project Report (6-min read) →
+<div class="bp-action-bar">
+  <a href="trebuchet.html" class="bp-btn bp-btn-primary">
+  Read Full Project Report (6-min read) →
   </a>
-  <a href="{{ '/' | relative_url }}" style="background: #1c202c; color: #94a3b8; border: 1px solid #2d3345; padding: 0.45rem 0.9rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
-    ← Back to Home
+  <a href="../" class="bp-btn bp-btn-secondary">
+  ← Back to Home
   </a>
 </div>
 
@@ -26,7 +48,7 @@ permalink: /projects/trebuchet-quick-overview.html
 
 Served as Team Captain leading 10 engineering students through the design, drafting, procurement, fabrication, and testing of a **Floating-Arm Trebuchet (FAT)**. The system was engineered to launch a **10 lb pumpkin** for maximum horizontal distance under a strict **$500 budget constraint** and a compressed **1-month timeline**.
 
-![Floating-Arm Trebuchet Competition Hero]({{ '/assets/images/trebuchet/trebuchet-competition-hero.png' | relative_url }})
+![Floating-Arm Trebuchet Competition Hero](../assets/images/trebuchet/trebuchet-competition-hero.png)
 
 *Full-scale floating-arm trebuchet fielded during the university engineering dynamics competition, showing the vertical guide tracks, drop-channel axle, and team loading the 10 lb pumpkin payload into the sling pouch.*
 
@@ -69,10 +91,10 @@ Served as Team Captain leading 10 engineering students through the design, draft
 
 ## Technical Documentation & Downloads
 
-- **[Full Technical Deep-Dive Report]({{ '/projects/trebuchet.html' | relative_url }})** — Complete analysis, frame drawings, annotated calculations, and lessons learned.
-- **[Initial Frame Drafting Package (PDF)]({{ '/assets/docs/trebuchet/trebuchet-initial-draft.pdf' | relative_url }})**
-- **[Bill of Materials (BOM) Spreadsheet (XLSX)]({{ '/assets/docs/trebuchet/trebuchet-temp-bom.xlsx' | relative_url }})**
+- **[Full Technical Deep-Dive Report](trebuchet.html)** — Complete analysis, frame drawings, annotated calculations, and lessons learned.
+- **[Initial Frame Drafting Package (PDF)](../assets/docs/trebuchet/trebuchet-initial-draft.pdf)**
+- **[Bill of Materials (BOM) Spreadsheet (XLSX)](../assets/docs/trebuchet/trebuchet-temp-bom.xlsx)**
 
 ---
 
-[← Back to Portfolio Home]({{ '/' | relative_url }})
+[← Back to Portfolio Home](../)
