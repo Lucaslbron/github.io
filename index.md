@@ -966,7 +966,7 @@ footer.site-footer {
   <div class="bp-spec-list">
   <div class="bp-spec-row">
   <span class="bp-spec-key">Expected Completion Timeline</span>
-  <span class="bp-spec-val">Late October - Early November</span>
+  <span class="bp-spec-val">December 2026</span>
   </div>
   </div>
   <div>
@@ -1016,7 +1016,7 @@ footer.site-footer {
   <div class="bp-spec-list">
   <div class="bp-spec-row">
   <span class="bp-spec-key">Expected Completion Timeline</span>
-  <span class="bp-spec-val">Late October</span>
+  <span class="bp-spec-val">December 2026</span>
   </div>
   </div>
   <div>
@@ -1068,7 +1068,7 @@ footer.site-footer {
   <div class="bp-spec-list">
   <div class="bp-spec-row">
   <span class="bp-spec-key">Expected Completion Timeline</span>
-  <span class="bp-spec-val">Late November - December</span>
+  <span class="bp-spec-val">December 2026</span>
   </div>
   </div>
   <div>
@@ -1118,7 +1118,7 @@ footer.site-footer {
   <div class="bp-spec-list">
   <div class="bp-spec-row">
   <span class="bp-spec-key">Expected Completion Timeline</span>
-  <span class="bp-spec-val">December 2026</span>
+  <span class="bp-spec-val">January 2027</span>
   </div>
   </div>
   <div>
