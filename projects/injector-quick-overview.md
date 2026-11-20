@@ -73,7 +73,7 @@ My primary responsibility was the **iterative CAD design of the injector top pla
 
 ### 4. CFD Verification of Impingement Convergence
 - **Action:** Ran ANSYS CFD multi-phase velocity streamline simulations on the calculated orifice angles to verify that the oxidizer and fuel streams converge cleanly at the intended impingement region.
-- **Validation:** CFD flow simulation yielded an injection velocity of **27.3 m/s**, providing computational confirmation of the analytical hand calculations (~27.4–27.6 m/s).
+- **Validation:** CFD flow simulation yielded an injection velocity of **27.3 m/s**, providing computational support for the analytical hand calculations (~27.4–27.6 m/s).
 
 ![ANSYS CFD Velocity Streamline Simulation]({{ '/assets/images/injector/ansys-impingement.png' | relative_url }})
 
