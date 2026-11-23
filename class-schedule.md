@@ -5,539 +5,645 @@ permalink: /class-schedule.html
 ---
 
 <style>
-  .schedule-hero {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-  .schedule-title {
-    font-size: 2.1rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-  }
+html, body {
+  background-color: #FFFFFF;
+  color: #09090B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .schedule-subtitle {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
+.schedule-hero {
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 2px solid #18181B;
+}
 
-  .action-nav-bar {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin: 1.25rem 0;
-  }
+.schedule-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  color: #09090B;
+  margin: 0 0 0.6rem 0;
+}
 
-  .btn-nav {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 0.9rem;
-    border-radius: 6px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
+.schedule-subtitle {
+  font-size: 1.02rem;
+  color: #52525B;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
 
-  .btn-nav-primary {
-    background: #3b82f6;
-    color: #ffffff !important;
-  }
-  .btn-nav-primary:hover {
-    background: #2563eb;
-  }
+.schedule-subtitle strong {
+  color: #09090B;
+}
 
-  .btn-nav-secondary {
-    background: #1c202c;
-    color: var(--text-muted) !important;
-    border: 1px solid #2d3345;
-  }
-  .btn-nav-secondary:hover {
-    color: #ffffff !important;
-    border-color: #3b82f6;
-  }
+.action-nav-bar {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 0 0;
+}
 
-  /* Stat Summary Cards */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 1rem;
-    margin: 1.75rem 0;
-  }
+a.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+  border: 1.5px solid #18181B;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
 
-  .stat-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.1rem 1rem;
-    position: relative;
-    overflow: hidden;
-  }
+a.btn-nav-primary {
+  background: #FFCC00;
+  color: #09090B !important;
+  font-weight: 700;
+}
 
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--accent);
-  }
+a.btn-nav-primary:hover {
+  background: #E6B800;
+  color: #09090B !important;
+}
 
-  .stat-val {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1.1;
-    margin-bottom: 0.35rem;
-    font-family: 'JetBrains Mono', monospace;
-  }
+a.btn-nav-secondary {
+  background: #FFFFFF;
+  color: #09090B !important;
+}
 
-  .stat-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-  }
+a.btn-nav-secondary:hover {
+  background: #FFCC00;
+  color: #09090B !important;
+}
 
-  /* Legend Box */
-  .legend-box {
-    background: rgba(22, 25, 34, 0.6);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.25rem;
-    margin-bottom: 2rem;
-  }
+/* Stat Summary Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
 
-  .legend-title {
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-    margin-bottom: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
+.stat-card {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-top: 4px solid #18181B;
+  border-radius: 3px;
+  padding: 1.1rem 1rem;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  .legend-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem 1.2rem;
-  }
+.stat-card--accent {
+  border-top-color: #FFCC00;
+}
 
-  .legend-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-size: 0.82rem;
-    color: var(--text-main);
-  }
+.stat-val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #09090B;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  .legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+.stat-label {
+  font-size: 0.72rem;
+  color: #52525B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  /* Filter Controls */
-  .filter-section {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
+/* Legend Box */
+.legend-box {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-left: 4px solid #FFCC00;
+  border-radius: 3px;
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  .search-wrapper {
-    position: relative;
-    width: 100%;
-  }
+.legend-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #09090B;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
-  .search-input {
-    width: 100%;
-    background: #0f1117;
-    border: 1px solid #2d3345;
-    border-radius: 7px;
-    padding: 0.65rem 1rem 0.65rem 2.4rem;
-    font-size: 0.9rem;
-    color: #ffffff;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.2s ease;
-  }
+.legend-source {
+  font-size: 0.76rem;
+  text-transform: none;
+  color: #52525B;
+  font-weight: 500;
+}
 
-  .search-input:focus {
-    border-color: #3b82f6;
-  }
+a.legend-source-link {
+  color: #09090B;
+  text-decoration: underline;
+  text-decoration-color: #FFCC00;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
 
-  .search-icon {
-    position: absolute;
-    left: 0.85rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    pointer-events: none;
-  }
+a.legend-source-link:hover {
+  background: #FFCC00;
+  color: #09090B;
+}
 
-  .filter-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-  }
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+}
 
-  .filter-btn {
-    background: #1c202c;
-    border: 1px solid #2d3345;
-    color: var(--text-muted);
-    border-radius: 20px;
-    padding: 0.35rem 0.85rem;
-    font-size: 0.82rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #09090B;
+}
 
-  .filter-btn:hover {
-    color: #ffffff;
-    border-color: #3b82f6;
-  }
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
 
-  .filter-btn.active {
-    background: #3b82f6;
-    border-color: #3b82f6;
-    color: #ffffff;
-    font-weight: 600;
-  }
+.legend-dot--aae {
+  background: #FFCC00;
+  border: 1.5px solid #18181B;
+}
 
-  /* Semester Section */
-  .semester-card {
-    margin-bottom: 2.5rem;
-    transition: all 0.2s ease;
-  }
+.legend-dot--me {
+  background: #09090B;
+  border: 1.5px solid #18181B;
+}
 
-  .semester-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 0.75rem 0;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #232838;
-  }
+.legend-dot--me-elective {
+  background: #FFFFFF;
+  border: 1.5px solid #18181B;
+}
 
-  .semester-title-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
+.legend-dot--aae-elective {
+  background: #FFCC00;
+  border: 1.5px dashed #18181B;
+}
 
-  .semester-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
-  }
+.legend-dot--math {
+  background: #FFFFFF;
+  border: 1.5px solid #52525B;
+}
 
-  .semester-status-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.25rem 0.65rem;
-    border-radius: 20px;
-  }
+.legend-dot--core {
+  background: #F3F4F6;
+  border: 1.5px dashed #18181B;
+}
 
-  .status-completed {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.35);
-  }
+/* Filter Controls */
+.filter-section {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-radius: 3px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  box-shadow: 4px 4px 0px #18181B;
+}
 
-  .status-planned {
-    background: rgba(168, 85, 247, 0.15);
-    color: #c084fc;
-    border: 1px solid rgba(168, 85, 247, 0.35);
-  }
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
 
-  .semester-stats {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-family: 'JetBrains Mono', monospace;
-  }
+.search-input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #18181B;
+  border-radius: 2px;
+  padding: 0.65rem 1rem 0.65rem 2.4rem;
+  font-size: 0.9rem;
+  color: #09090B;
+  font-family: inherit;
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
 
-  /* Course Cards Grid */
-  .course-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+.search-input::placeholder {
+  color: #52525B;
+}
 
-  .course-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.15rem 1.25rem;
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-    position: relative;
-  }
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #FFCC00;
+}
 
-  .course-card:hover {
-    border-color: #3b82f6;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-  }
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #52525B;
+  pointer-events: none;
+}
 
-  .course-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.65rem;
-    flex-wrap: wrap;
-  }
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
 
-  .course-id-title {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
+.filter-btn {
+  background: #FFFFFF;
+  border: 1.5px solid #18181B;
+  color: #09090B;
+  border-radius: 2px;
+  padding: 0.4rem 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
 
-  .course-code {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #60a5fa;
-  }
+.filter-btn:hover {
+  background: #FFCC00;
+  color: #09090B;
+  border-color: #18181B;
+}
 
-  .course-name {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 0;
-  }
+.filter-btn.active {
+  background: #FFCC00;
+  border-color: #18181B;
+  color: #09090B;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px #18181B;
+}
 
-  .course-badges {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    flex-wrap: wrap;
-  }
+/* Semester Section */
+.semester-card {
+  margin-bottom: 2.5rem;
+}
 
-  /* Badges */
-  .grade-badge {
-    font-size: 0.82rem;
-    font-weight: 700;
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-    font-family: 'JetBrains Mono', monospace;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
+.semester-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  margin-bottom: 1.15rem;
+  border-bottom: 2px solid #18181B;
+}
 
-  .grade-a {
-    background: rgba(16, 185, 129, 0.18);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.4);
-  }
+.semester-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
 
-  .grade-b {
-    background: rgba(56, 189, 248, 0.18);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.4);
-  }
+.semester-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #09090B;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
 
-  .grade-planned {
-    background: rgba(168, 85, 247, 0.15);
-    color: #d8b4fe;
-    border: 1px solid rgba(168, 85, 247, 0.35);
-  }
+.semester-status-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 2px;
+  border: 1.5px solid #18181B;
+}
 
-  .track-badge {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.25rem 0.55rem;
-    border-radius: 6px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
+.status-completed {
+  background: #09090B;
+  color: #FFCC00;
+}
 
-  .track-aae {
-    background: rgba(251, 191, 36, 0.12);
-    color: #fbbf24;
-    border: 1px solid rgba(251, 191, 36, 0.3);
-  }
+.status-planned {
+  background: #FFCC00;
+  color: #09090B;
+}
 
-  .track-me {
-    background: rgba(56, 189, 248, 0.12);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-  }
+.semester-stats {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #52525B;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  .track-me-elective {
-    background: rgba(45, 212, 191, 0.12);
-    color: #2dd4bf;
-    border: 1px solid rgba(45, 212, 191, 0.3);
-  }
+/* Course Cards Grid */
+.course-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
-  .track-aae-elective {
-    background: rgba(251, 146, 60, 0.12);
-    color: #fb923c;
-    border: 1px solid rgba(251, 146, 60, 0.3);
-  }
+.course-card {
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-radius: 3px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 4px 4px 0px #18181B;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
 
-  .track-math {
-    background: rgba(167, 139, 250, 0.12);
-    color: #c084fc;
-    border: 1px solid rgba(167, 139, 250, 0.3);
-  }
+.course-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #18181B;
+}
 
-  .track-core {
-    background: rgba(74, 222, 128, 0.12);
-    color: #4ade80;
-    border: 1px solid rgba(74, 222, 128, 0.3);
-  }
+.course-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+}
 
-  .course-description {
-    font-size: 0.92rem;
-    color: #cbd5e1;
-    line-height: 1.6;
-    margin: 0.5rem 0 0.75rem 0;
-  }
+.course-id-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
 
-  .course-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #1f2432;
-    padding-top: 0.6rem;
-    margin-top: 0.6rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
+.course-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #09090B;
+  background: #FFCC00;
+  border: 1px solid #18181B;
+  border-radius: 2px;
+  padding: 0.1rem 0.45rem;
+  width: fit-content;
+}
 
-  .course-credits {
-    font-family: 'JetBrains Mono', monospace;
-  }
+.course-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #09090B;
+  margin: 0.15rem 0 0 0;
+  border: none;
+  padding: 0;
+}
 
-  .course-catalog-link {
-    color: #60a5fa;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.8rem;
-    transition: color 0.15s ease;
-  }
+.course-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
 
-  .course-catalog-link:hover {
-    color: #93c5fd;
-    text-decoration: underline;
-  }
+/* Badges (Strict White / Black / CAT Yellow) */
+.grade-badge {
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.24rem 0.6rem;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
 
-  .no-results-msg {
-    display: none;
-    text-align: center;
-    padding: 3rem 1rem;
-    color: var(--text-muted);
-    font-size: 1.05rem;
-  }
+.grade-a {
+  background: #FFCC00;
+  color: #09090B;
+  border: 1.5px solid #18181B;
+}
+
+.grade-b {
+  background: #FFFFFF;
+  color: #09090B;
+  border: 1.5px solid #18181B;
+}
+
+.grade-planned {
+  background: #09090B;
+  color: #FFCC00;
+  border: 1.5px solid #18181B;
+}
+
+.track-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.24rem 0.55rem;
+  border-radius: 2px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.track-aae {
+  background: #FFCC00;
+  color: #09090B;
+  border: 1px solid #18181B;
+}
+
+.track-me {
+  background: #09090B;
+  color: #FFFFFF;
+  border: 1px solid #18181B;
+}
+
+.track-me-elective {
+  background: #FFFFFF;
+  color: #09090B;
+  border: 1px solid #18181B;
+}
+
+.track-aae-elective {
+  background: #FFCC00;
+  color: #09090B;
+  border: 1px dashed #18181B;
+}
+
+.track-math {
+  background: #FFFFFF;
+  color: #09090B;
+  border: 1px solid #52525B;
+}
+
+.track-core {
+  background: #F3F4F6;
+  color: #52525B;
+  border: 1px dashed #18181B;
+}
+
+.course-description {
+  font-size: 0.92rem;
+  color: #52525B;
+  line-height: 1.6;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #D4D4D8;
+  padding-top: 0.65rem;
+  margin-top: 0.65rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #52525B;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-credits {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #09090B;
+}
+
+a.course-catalog-link {
+  background: #FFFFFF;
+  color: #09090B;
+  border: 1px solid #18181B;
+  border-radius: 2px;
+  padding: 0.25rem 0.55rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+a.course-catalog-link:hover {
+  background: #FFCC00;
+  color: #09090B;
+  text-decoration: none !important;
+}
+
+.no-results-msg {
+  display: none;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: #F3F4F6;
+  border: 1.5px solid #18181B;
+  border-radius: 3px;
+  box-shadow: 4px 4px 0px #18181B;
+  color: #09090B;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
 </style>
 
 <div class="schedule-hero">
   <h1 class="schedule-title">Academic Course Schedule & Degree Progress</h1>
   <div class="schedule-subtitle">
-    <strong>Lucas Lebron</strong> • Dual Degree: <strong>B.S. Aerospace Engineering (Astronautics Concentration)</strong> & <strong>B.S. Mechanical Engineering</strong> • Minor in <strong>Mathematics</strong><br>
-    Southern Polytechnic College of Engineering and Engineering Technology, <strong>Kennesaw State University</strong>
+  <strong>Lucas Lebron</strong> • Dual Degree: <strong>B.S. Aerospace Engineering (Astronautics Concentration)</strong> & <strong>B.S. Mechanical Engineering</strong> • Minor in <strong>Mathematics</strong><br>
+  Southern Polytechnic College of Engineering and Engineering Technology, <strong>Kennesaw State University</strong>
   </div>
 
   <div class="action-nav-bar">
-    <a href="{{ '/' | relative_url }}" class="btn-nav btn-nav-secondary">
-      ← Back to Portfolio Home
-    </a>
-    <a href="{{ '/assets/docs/resume-lucas-lebron.pdf' | relative_url }}" class="btn-nav btn-nav-primary">
-      View Resume (PDF)
-    </a>
-    <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="btn-nav btn-nav-secondary">
-      Official KSU Catalog ↗
-    </a>
+  <a href="./" class="btn-nav btn-nav-secondary">
+  ← Back to Portfolio Home
+  </a>
+  <a href="assets/docs/resume-lucas-lebron.pdf" class="btn-nav btn-nav-primary">
+  View Resume (PDF)
+  </a>
+  <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="btn-nav btn-nav-secondary">
+  Official KSU Catalog ↗
+  </a>
   </div>
 </div>
 
 <!-- Key Performance Statistics -->
 <div class="stats-grid">
-  <div class="stat-card" style="--accent: #10b981;">
-    <div class="stat-val">3.65</div>
-    <div class="stat-label">Completed Major GPA</div>
+  <div class="stat-card stat-card--accent">
+  <div class="stat-val">3.65</div>
+  <div class="stat-label">Completed Major GPA</div>
   </div>
-  <div class="stat-card" style="--accent: #3b82f6;">
-    <div class="stat-val">145</div>
-    <div class="stat-label">Credits Completed</div>
+  <div class="stat-card">
+  <div class="stat-val">145</div>
+  <div class="stat-label">Credits Completed</div>
   </div>
-  <div class="stat-card" style="--accent: #10b981;">
-    <div class="stat-val">16</div>
-    <div class="stat-label">Courses Completed (10 A's, 6 B's)</div>
+  <div class="stat-card stat-card--accent">
+  <div class="stat-val">16</div>
+  <div class="stat-label">Courses Completed (10 A's, 6 B's)</div>
   </div>
-  <div class="stat-card" style="--accent: #a855f7;">
-    <div class="stat-val">20</div>
-    <div class="stat-label">Planned / In Progress</div>
+  <div class="stat-card">
+  <div class="stat-val">20</div>
+  <div class="stat-label">Planned / In Progress</div>
   </div>
-  <div class="stat-card" style="--accent: #f59e0b;">
-    <div class="stat-val">36</div>
-    <div class="stat-label">Total Curriculum Courses</div>
+  <div class="stat-card stat-card--accent">
+  <div class="stat-val">36</div>
+  <div class="stat-label">Total Curriculum Courses</div>
   </div>
 </div>
 
 <!-- Curriculum Flowchart Legend -->
 <div class="legend-box">
   <div class="legend-title">
-    <span>Curriculum Classification & Legend (2025–2026 Flowcharts)</span>
-    <span style="font-size: 0.78rem; text-transform: none; color: var(--text-muted); font-weight: normal;">Source: <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" style="color: #60a5fa;">KSU Academic Catalog</a></span>
+  <span>Curriculum Classification & Legend (2025–2026 Flowcharts)</span>
+  <span class="legend-source">Source: <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="legend-source-link">KSU Academic Catalog</a></span>
   </div>
   <div class="legend-items">
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #fbbf24;"></span>
-      <span><strong>AAE Credits:</strong> Aerospace Engineering Major Core</span>
-    </div>
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #38bdf8;"></span>
-      <span><strong>ME Credits:</strong> Mechanical Engineering Major Core</span>
-    </div>
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #2dd4bf;"></span>
-      <span><strong>ME Technical Elective:</strong> Upper-division ME Specialization</span>
-    </div>
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #fb923c;"></span>
-      <span><strong>AAE Technical Elective:</strong> Upper-division AAE Specialization</span>
-    </div>
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #c084fc;"></span>
-      <span><strong>Math Minor:</strong> Advanced Mathematics Elective</span>
-    </div>
-    <div class="legend-item">
-      <span class="legend-dot" style="background: #4ade80;"></span>
-      <span><strong>Core IMPACTS:</strong> Institutional Social & Economic Core</span>
-    </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--aae"></span>
+  <span><strong>AAE Credits:</strong> Aerospace Engineering Major Core</span>
+  </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--me"></span>
+  <span><strong>ME Credits:</strong> Mechanical Engineering Major Core</span>
+  </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--me-elective"></span>
+  <span><strong>ME Technical Elective:</strong> Upper-division ME Specialization</span>
+  </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--aae-elective"></span>
+  <span><strong>AAE Technical Elective:</strong> Upper-division AAE Specialization</span>
+  </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--math"></span>
+  <span><strong>Math Minor:</strong> Advanced Mathematics Elective</span>
+  </div>
+  <div class="legend-item">
+  <span class="legend-dot legend-dot--core"></span>
+  <span><strong>Core IMPACTS:</strong> Institutional Social & Economic Core</span>
+  </div>
   </div>
 </div>
 
@@ -1493,83 +1599,69 @@ permalink: /class-schedule.html
 </div>
 
 <script>
-  (function() {
-    const searchInput = document.getElementById('courseSearch');
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const courseCards = document.querySelectorAll('.course-card');
-    const semesterCards = document.querySelectorAll('.semester-card');
-    const noResults = document.getElementById('noResults');
-
-    let currentFilter = 'all';
-    let searchQuery = '';
-
-    function filterCourses() {
-      let visibleTotal = 0;
-
-      semesterCards.forEach(semester => {
-        let visibleInSemester = 0;
-        const cards = semester.querySelectorAll('.course-card');
-
-        cards.forEach(card => {
-          const track = card.getAttribute('data-track');
-          const status = card.getAttribute('data-status');
-          const cardText = card.textContent.toLowerCase();
-
-          // Check filter condition
-          let matchesFilter = false;
-          if (currentFilter === 'all') {
-            matchesFilter = true;
-          } else if (currentFilter === 'completed') {
-            matchesFilter = (status === 'completed');
-          } else if (currentFilter === 'planned') {
-            matchesFilter = (status === 'planned');
-          } else if (currentFilter === 'aae') {
-            matchesFilter = (track === 'aae' || track === 'aae-elective');
-          } else if (currentFilter === 'me') {
-            matchesFilter = (track === 'me' || track === 'me-elective');
-          } else if (currentFilter === 'math') {
-            matchesFilter = (track === 'math');
-          }
-
-          // Check search query
-          const matchesSearch = searchQuery === '' || cardText.includes(searchQuery);
-
-          if (matchesFilter && matchesSearch) {
-            card.style.display = 'block';
-            visibleInSemester++;
-            visibleTotal++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        // Hide semester if no matching courses
-        if (visibleInSemester === 0) {
-          semester.style.display = 'none';
-        } else {
-          semester.style.display = 'block';
-        }
-      });
-
-      if (visibleTotal === 0) {
-        noResults.style.display = 'block';
-      } else {
-        noResults.style.display = 'none';
-      }
-    }
-
-    searchInput.addEventListener('input', function(e) {
-      searchQuery = e.target.value.trim().toLowerCase();
-      filterCourses();
-    });
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        currentFilter = this.getAttribute('data-filter');
-        filterCourses();
-      });
-    });
-  })();
+(function() {
+  const searchInput = document.getElementById('courseSearch');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const courseCards = document.querySelectorAll('.course-card');
+  const semesterCards = document.querySelectorAll('.semester-card');
+  const noResults = document.getElementById('noResults');
+  let currentFilter = 'all';
+  let searchQuery = '';
+  function filterCourses() {
+  let visibleTotal = 0;
+  semesterCards.forEach(semester => {
+  let visibleInSemester = 0;
+  const cards = semester.querySelectorAll('.course-card');
+  cards.forEach(card => {
+  const track = card.getAttribute('data-track');
+  const status = card.getAttribute('data-status');
+  const cardText = card.textContent.toLowerCase();
+  let matchesFilter = false;
+  if (currentFilter === 'all') {
+  matchesFilter = true;
+  } else if (currentFilter === 'completed') {
+  matchesFilter = (status === 'completed');
+  } else if (currentFilter === 'planned') {
+  matchesFilter = (status === 'planned');
+  } else if (currentFilter === 'aae') {
+  matchesFilter = (track === 'aae' || track === 'aae-elective');
+  } else if (currentFilter === 'me') {
+  matchesFilter = (track === 'me' || track === 'me-elective');
+  } else if (currentFilter === 'math') {
+  matchesFilter = (track === 'math');
+  }
+  const matchesSearch = searchQuery === '' || cardText.includes(searchQuery);
+  if (matchesFilter && matchesSearch) {
+  card.style.display = 'block';
+  visibleInSemester++;
+  visibleTotal++;
+  } else {
+  card.style.display = 'none';
+  }
+  });
+  if (visibleInSemester === 0) {
+  semester.style.display = 'none';
+  } else {
+  semester.style.display = 'block';
+  }
+  });
+  if (visibleTotal === 0) {
+  noResults.style.display = 'block';
+  } else {
+  noResults.style.display = 'none';
+  }
+  }
+  searchInput.addEventListener('input', function(e) {
+  searchQuery = e.target.value.trim().toLowerCase();
+  filterCourses();
+  });
+  filterButtons.forEach(btn => {
+  btn.addEventListener('click', function() {
+  filterButtons.forEach(b => b.classList.remove('active'));
+  this.classList.add('active');
+  currentFilter = this.getAttribute('data-filter');
+  filterCourses();
+  });
+  });
+})();
 </script>
