@@ -531,28 +531,6 @@ a.legend-source-link:hover {
   color: #09090B;
 }
 
-a.course-catalog-link {
-  background: #FFFFFF;
-  color: #09090B;
-  border: 1px solid #18181B;
-  border-radius: 2px;
-  padding: 0.25rem 0.55rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.76rem;
-  font-weight: 600;
-  text-decoration: none !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-a.course-catalog-link:hover {
-  background: #FFCC00;
-  color: #09090B;
-  text-decoration: none !important;
-}
-
 .no-results-msg {
   display: none;
   text-align: center;
@@ -700,9 +678,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -722,9 +697,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -744,9 +716,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -766,9 +735,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -788,9 +754,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -810,9 +773,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -849,9 +809,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -871,9 +828,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -893,9 +847,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -915,9 +866,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -937,9 +885,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -959,9 +904,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -998,9 +940,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (1 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1020,9 +959,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1042,9 +978,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1064,9 +997,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1103,9 +1033,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1125,9 +1052,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1147,9 +1071,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1169,9 +1090,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1191,9 +1109,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1230,9 +1145,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (1 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1252,9 +1164,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1274,9 +1183,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1296,9 +1202,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1318,9 +1221,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1340,9 +1240,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">4 Credit Hours (3 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1379,9 +1276,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1401,9 +1295,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1440,9 +1331,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (1 Class, 6 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1462,9 +1350,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1484,9 +1369,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1506,9 +1388,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1528,9 +1407,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1550,9 +1426,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">1 Credit Hour (0 Class, 3 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
@@ -1589,9 +1462,6 @@ a.course-catalog-link:hover {
       </p>
       <div class="course-footer">
         <span class="course-credits">3 Credit Hours (3 Class, 0 Lab)</span>
-        <a href="https://catalog.kennesaw.edu/index.php" target="_blank" rel="noopener noreferrer" class="course-catalog-link">
-          KSU Catalog Entry ↗
-        </a>
       </div>
     </div>
 
